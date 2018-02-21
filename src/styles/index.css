@@ -1,0 +1,305 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#Layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#SegmentMain {
+  flex: 1;
+}
+
+.layout {
+  margin-top: 30px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+a {
+  color: black;
+}
+
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.debug {
+  color: red;
+}
+
+.logo {
+  font-family: "Fira Code", monospace;
+  max-width: 200px;
+  margin: 10px 0;
+  text-align: center;
+  color: black;
+}
+
+.nav-topics {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-topics a {
+  color: #aaa;
+}
+
+.nav-topics a:hover {
+  color: #333;
+}
+
+.center {
+  justify-content: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.featured.post {
+  margin: 32px 0;
+}
+
+.large.post {
+  margin: 30px 0;
+}
+
+.medium.post {
+  margin: 28px 0;
+}
+
+.small.post {
+  margin: 24px 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.single.header {
+  background: #eee;
+}
+
+.auth.header {
+  background: #cccce5;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.featured.text {
+  margin-bottom: 30px;
+}
+
+.large.text {
+  margin-bottom: 30px;
+}
+
+.medium.text {
+  margin-bottom: 20px;
+}
+
+.small.text {
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.image {
+  height: auto;
+}
+
+.large.image {
+  height: 300px;
+}
+
+.medium.image {
+  height: 200px;
+}
+
+.small.image {
+  height: 150px;
+}
+
+.featured.image {
+  max-height: 600px;
+  /* max-width: 400px; */
+}
+
+/* -------------------------------------------------------------------------- */
+
+.title {
+  font-weight: bold;
+}
+
+.large.title {
+  border-top: 4px solid #333;
+  padding-top: 8px;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.medium.title {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.small.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.snippet {
+  color: #555;
+}
+
+.large.snippet {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.medium.snippet {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.small.snippet {
+  margin: 2px 0;
+  font-size: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.meta {
+  display: block;
+  margin: 2px 0;
+}
+
+.large.meta {
+  color: #333;
+  font-size: 18px;
+}
+
+.medium.meta {
+  color: #888;
+  font-size: 16px;
+}
+
+.small.meta {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.segment.title {
+  padding: 10px 0;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.cta {
+  padding: 4px;
+  margin: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.cta.buttons {
+  margin: 10px 0;
+}
+
+.cta.button {
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 2px solid navy;
+  font-weight: 900;
+  cursor: pointer;
+  color: navy;
+  text-transform: uppercase;
+  background: none;
+}
+
+.cta.avatar img {
+  border: 2px solid #333;
+  border-radius: 32px;
+  height: 40px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.action.button {
+  background: navy;
+  color: #fff;
+  border: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.column.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search.box {
+  border: 2px solid #aaa;
+  padding: 4px 8px;
+}
+
+.trimmer {
+  overflow: hidden;
+}
+
+.auth.form {
+  margin: 30px 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.page.title {
+  font-family: sans-serif;
+  font-size: 42px;
+}
+
+.page.text {
+  font-family: serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+footer {
+  padding: 10px;
+  border-top: 2px solid #aaa;
+}
+
+.footer.text {
+  margin-right: 20px;
+}
