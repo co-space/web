@@ -13,6 +13,7 @@ import Login from "./pages/Login"
 import New from "./pages/New"
 import Profile from "./pages/Profile"
 import Settings from "./pages/Settings"
+import Details from "./pages/Details"
 
 import Info from "./pages/Info"
 
@@ -34,6 +35,7 @@ const App = props => {
       <Route exact path={`/profile`} component={Profile} />
       <Route path={`/profile/:username`} component={Profile} />
       <Route path={`/settings`} component={Settings} />
+      <Route path={`/details`} component={Details} />
     </div>
   )
 }
