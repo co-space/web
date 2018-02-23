@@ -5,6 +5,7 @@ import ThumbnailBook from "../medium/ThumbnailBook"
 import AmenitiesDetail from "../small/AmenitiesDetail"
 import Carousel from "../medium/Carousel"
 import Review from "../medium/Review"
+import InfoMenu from "../medium/InfoMenu"
 
 const Topic = ({match}) => {
   const topic = {
@@ -35,12 +36,20 @@ const Topic = ({match}) => {
           <AmenitiesDetail/>
           <AmenitiesDetail/>
         </Row>
+      
+        <h4>
+          <b>Price List</b>
+        </h4>
+        <InfoMenu/>
+
+
         <h4>
           <b>Photos</b>
         </h4>
         <Carousel/>
         <Input className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
         <Button className="mb-3" color="primary" size="sm" block>Submit</Button>
+
 
         <h4>
           <b>32 Reviews</b>
