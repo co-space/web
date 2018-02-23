@@ -10,7 +10,7 @@ import {
 } from 'reactstrap';
 
 const Review = (props) => {
-  return (<div className="mb-1">
+  return (<div className="mb-3">
     <Card>
       <CardBody>
         <div className="d-flex">
