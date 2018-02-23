@@ -36,12 +36,12 @@ const Topic = ({match}) => {
           <AmenitiesDetail/>
           <AmenitiesDetail/>
         </Row>
-        <hr/>
+      
         <h4>
           <b>Price List</b>
         </h4>
         <InfoMenu/>
-        <hr/> 
+
 
         <h4>
           <b>Photos</b>
