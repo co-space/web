@@ -1,13 +1,13 @@
 import React from "react"
 // import PropTypes from "prop-types"
-import Thumbnail from "./Thumbnail"
+import ThumbnailDetail from "./ThumbnailDetail"
 import {
   Col,
 } from "reactstrap"
 
 const HomeThumbnail = () => (
   <Col sm={3} className="mb-3">
-    <Thumbnail/>
+    <ThumbnailDetail/>
   </Col>
 )
 

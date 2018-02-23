@@ -1,7 +1,7 @@
 import React from "react"
 import {default as Layout} from "../templates/LayoutDefault"
 import {Row, Col, Container, Input,Button} from "reactstrap"
-import Thumbnail from "../medium/Thumbnail"
+import ThumbnailBook from "../medium/ThumbnailBook"
 import AmenitiesDetail from "../small/AmenitiesDetail"
 import Carousel from "../medium/Carousel"
 import Review from "../medium/Review"
@@ -55,7 +55,7 @@ const Topic = ({match}) => {
         <Review/>
       </Col>
       <Col sm={4}>
-        <Thumbnail/>
+        <ThumbnailBook/>
       </Col>
 
     </Row>
