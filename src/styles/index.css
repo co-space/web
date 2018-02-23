@@ -217,10 +217,14 @@ a:visited, a:hover {
 /* -------------------------------------------------------------------------- */
 
 .cta {
-  padding: 4px;
+  padding: 6px;
+  margin-top: 23px;
+  margin-right: 8px;
+  margin-left: 12px;
+  /* padding: 4px;
   margin: 6px;
   display: flex;
-  align-items: center;
+  align-items: center; */
 }
 
 .cta.buttons {
@@ -354,5 +358,5 @@ footer {
   border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
-  
+
 }

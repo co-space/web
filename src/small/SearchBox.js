@@ -1,14 +1,14 @@
 import React from "react"
+import { Form, Input } from "reactstrap"
 
 const SearchBox = props => (
-  <form className="cta">
-    <input
-      className="search box"
-      type="text"
-      id="searchBox"
-      placeholder="Search posts..."
-    />
-  </form>
-)
+
+      <Input
+        className="cta"
+        type="text"
+        id="searchBox"
+        placeholder="Search space"
+      />
+    )
 
 export default SearchBox
