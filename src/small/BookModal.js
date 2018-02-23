@@ -4,7 +4,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
-const BookModal = (prop) => {
+export default class BookModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +23,7 @@ const BookModal = (prop) => {
   render() {
     return (
       <div>
-        <Button outline color="success" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+        <Button outline color="success" size="sm" onClick={this.toggle}>Book now !</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
@@ -39,5 +39,3 @@ const BookModal = (prop) => {
   }
 
 }
-
-export default BookModal
