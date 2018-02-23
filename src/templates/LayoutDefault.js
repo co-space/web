@@ -8,8 +8,9 @@ import ConnectedTopicTags from "../redux/containers/ConnectedTopicTags"
 const LayoutDefault = ({ children }) => (
   <Layout>
     <SegmentCTAHeader />
-    <ConnectedTopicTags />
-    <div className="default layout">{children}</div>
+    {/* <ConnectedTopicTags /> */}
+    {/* <div className="default layout">{children}</div> */}
+    <div>{children}</div>
   </Layout>
 )
 
