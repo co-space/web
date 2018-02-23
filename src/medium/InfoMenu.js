@@ -23,6 +23,7 @@ export default class InfoMenu extends React.Component {
   render() {
     return (
       <div>
+
         <Nav tabs>
           <NavItem>
             <NavLink
@@ -42,13 +43,13 @@ export default class InfoMenu extends React.Component {
           </NavItem>
           <NavItem>
             <NavLink
-              className={classnames({ active: this.state.activeTab === '1' })}
+              className={classnames({ active: this.state.activeTab === '3' })}
               onClick={() => { this.toggle('3'); }}
             >
               Private Office
             </NavLink>
           </NavItem>
-        </Nav>
+
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
             <Row>
@@ -72,7 +73,11 @@ export default class InfoMenu extends React.Component {
             </Row>
           </TabPane>
         </TabContent>
+        </Nav>
+    
+
       </div>
+
     );
   }
 }

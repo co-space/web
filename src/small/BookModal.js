@@ -28,6 +28,7 @@ export default class BookModal extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Room Reservation</ModalHeader>
           <ModalBody>
+
             <Bookform/>
           </ModalBody>
           <ModalFooter>
