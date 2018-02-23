@@ -14,12 +14,16 @@ import New from "./pages/New"
 import Profile from "./pages/Profile"
 import Settings from "./pages/Settings"
 
+import Info from "./pages/Info"
+
+
 const App = props => {
   return (
     <div id="App" className="routes">
       <Route exact path={`/`} component={Home} />
       <Route path={`/posts`} component={Posts} />
       <Route path={`/topics`} component={Topics} />
+      <Route path={`/co`} component={Info} />
 
       <Route path={`/p/:id`} component={ConnectedPosts} />
       <Route path={`/t/:id`} component={Topic} />
