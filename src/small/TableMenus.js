@@ -4,7 +4,7 @@ import { Table } from 'reactstrap';
 export default class TableMenus extends React.Component {
   render() {
     return (
-      <Table size="sm">
+      <Table size="sm" bordered>
         <thead>
           <tr>
             <th>People</th>
