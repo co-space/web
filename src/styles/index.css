@@ -28,8 +28,7 @@ a {
   color: black;
 }
 
-a:visited,
-a:hover {
+a:visited, a:hover {
   text-decoration: none;
   color: black;
 }
@@ -87,7 +86,7 @@ a:hover {
   margin: 28px 0;
 }
 
-.small.post {
+400px .small.post {
   margin: 24px 0;
 }
 
@@ -302,4 +301,58 @@ footer {
 
 .footer.text {
   margin-right: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.rating-star {
+  height: 25px;
+}
+
+.rating-point {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.corousel {
+  max-height: 200px;
+  min-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.corousel-arrow{
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.avatar {
+  border-radius: 30px;
+  height: 32px;
+  width: 32px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ava-profile-page {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.prfile-review-thumb{
+  width: 100%;
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
