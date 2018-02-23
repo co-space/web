@@ -23,7 +23,9 @@ const Review = (props) => {
           </div>
         </div>
         <hr/>
-        <div className="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio praesentium a officiis, sed fugiat non debitis reprehenderit voluptatem. Necessitatibus culpa inventore quod dolorum veniam, eius ratione fuga, ad vel fugit.</div>
+        <div className="text-justify">
+          Lorem ipsum dolor sit amet, consectetur adipisicing . Reprehenderit quam hic excepturi, aut expedita, doloremque nostrum incidunt corporis nihil dicta minus repellat blanditiis ex deleniti voluptas voluptatum. Necessitatibus, reprehenderit, repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio praesentium a officiis, sed fugiat non debitis reprehenderit voluptatem. Necessitatibus culpa inventore quod dolorum veniam, eius ratione fuga, ad vel fugit.
+          </div>
       </CardBody>
     </Card>
   </div>);

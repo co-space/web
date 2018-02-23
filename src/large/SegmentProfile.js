@@ -6,6 +6,7 @@ import {Row, Col, ListGroup, ListGroupItem} from "reactstrap"
 import PageTitle from "../medium/PageTitle"
 import PageSubtitle from "../medium/PageSubtitle"
 import Review from "../medium/Review"
+import ReviewHistory from "../medium/ReviewHistory"
 
 import ActionButton from "../small/ActionButton"
 
@@ -56,16 +57,17 @@ const SegmentProfile = ({profile}) => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, commodi asperiores quisquam soluta amet nemo omnis nihil, quam, velit atque nesciunt voluptatem obcaecati quas natus. Necessitatibus officiis non, magnam qui?
         </Col>
       </Row>
+      <hr/>
       {/* Review --------------------------------------------------------- */}
-      <Row>
-        <Col sm={3}>
-          <img className="prfile-review-thumb" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt=""/>
-        </Col>
-        <Col sm={9}>
-          <Review/>
-        </Col>
-      </Row>
-
+      <h4>
+        <b>Review History</b>
+      </h4>
+      <ReviewHistory/>
+      <ReviewHistory/>
+      <ReviewHistory/>
+      <hr/>
+      {/* My Cospace ------------------------------------------------------ */}
+        
     </Col>
   </Row>)
 }
