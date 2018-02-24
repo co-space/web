@@ -15,7 +15,8 @@ import {
   SET_LOGIN_TOKEN,
   SET_DECODED_ACCOUNT,
   SUBMIT_NEW_POST,
-  GET_ALL_SPACES
+  GET_ALL_SPACES,
+  GET_ONE_SPACE
   // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
@@ -181,10 +182,27 @@ export const fetchAllSpaces = payload => dispatch => {
       return rawResponse.data
     })
     .then(response => {
-      // console.log(dispatch(saveAllPosts(payload, response)));
       return dispatch(getAllSpaces(payload,response.data))
-      // console.log(getAllSpaces(payload,response.data));
     })
+}
 
-  // dispatch(getAllSpaces(payload,"test"))
+export const getOneSpace = (response) => ({
+  type: GET_ONE_SPACE,
+  payload: {
+    data: response
+  }
+})
+
+export const fetchOneSpace = payload => dispatch => {
+
+  return axios
+    .get(`${process.env.REACT_APP_API_URL}/coworking_spaces/${payload}`)
+    .then(rawResponse => {
+      return rawResponse.data
+    })
+    .then(response => {
+      return dispatch(getOneSpace(response.data))
+    })
+  // console.log(`current payload .... ${payload}`);
+  // console.log(getOneSpace("test"));
 }

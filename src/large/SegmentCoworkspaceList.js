@@ -36,16 +36,12 @@ class SegmentCoworkspaceList extends Component {
 
   render() {
     var lists = this.props.space_lists || []
-    if(lists.length > 1){
-      console.log(lists[0]);
-
-      console.log(lists[0].id);
-
-    }
-
+    // if(lists.length > 1){
+    //   console.log(lists[0]);
+    //   console.log(lists[0].id);
+    // }
     return (<div>
       <Row >
-
         {lists.map((list, index) => {
           return (
             <HomeThumbnail key={index} name={list.name} photo={list.photos[0]} id={list.id} />

@@ -16,6 +16,7 @@ import Settings from "./pages/Settings"
 import Details from "./pages/Details"
 
 import Info from "./pages/Info"
+import ConnectedInfo from "./redux/containers/ConnectedInfo"
 
 
 const App = props => {
@@ -24,7 +25,7 @@ const App = props => {
       <Route exact path={`/`} component={Home} />
       <Route path={`/posts`} component={Posts} />
       <Route path={`/topics`} component={Topics} />
-      <Route path={`/co`} component={Info} />
+      <Route path={`/co/:id`} component={ConnectedInfo} />
 
       <Route path={`/p/:id`} component={ConnectedPosts} />
       <Route path={`/t/:id`} component={Topic} />

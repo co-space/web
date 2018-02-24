@@ -5,7 +5,7 @@
 // import {posts} from "../stores"
 
 import {
-  GET_ALL_SPACES
+  GET_ALL_SPACES, GET_ONE_SPACE
   // HANDLE_ERROR
 } from "../actions/types"
 
@@ -25,7 +25,12 @@ export default(state = {}, action) => {
     case GET_ALL_SPACES:
       return {
         ...state,
-        space_lists : action.payload.data
+        space_lists: action.payload.data
+      }
+    case GET_ONE_SPACE:
+      return {
+        ...state,
+        selected_space: action.payload.data
       }
     default:
       return state
