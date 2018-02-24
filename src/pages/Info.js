@@ -1,6 +1,6 @@
 import React from "react"
 import {default as Layout} from "../templates/LayoutDefault"
-import {Row, Col, Container, Input,Button} from "reactstrap"
+import {Row, Col, Input, Button} from "reactstrap"
 import ThumbnailBook from "../medium/ThumbnailBook"
 import AmenitiesDetail from "../small/AmenitiesDetail"
 import Carousel from "../medium/Carousel"
@@ -36,20 +36,18 @@ const Topic = ({match}) => {
           <AmenitiesDetail/>
           <AmenitiesDetail/>
         </Row>
-      
+
         <h4>
           <b>Price List</b>
         </h4>
         <InfoMenu/>
-
 
         <h4>
           <b>Photos</b>
         </h4>
         <Carousel/>
         <Input className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
-        <Button className="mb-3" color="primary" size="sm" block>Submit</Button>
-
+        <Button className="mb-3" color="primary" size="sm" block="block">Submit</Button>
 
         <h4>
           <b>32 Reviews</b>

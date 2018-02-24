@@ -2,8 +2,6 @@ import React from "react"
 import {Link} from "react-router-dom"
 // import PropTypes from "prop-types"
 import {
-  Row,
-  Col,
   Card,
   CardImg,
   CardText,
@@ -14,7 +12,7 @@ import {
 
 const Thumbnail = () => (
     <Card>
-      <CardImg top="top" width="100%" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt="Card image cap"/>
+      <CardImg top={true} width="100%" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt="Card image cap"/>
       <CardBody>
         <CardTitle>Impact Hub</CardTitle>
         <div className="d-flex justify-content-between">

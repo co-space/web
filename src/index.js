@@ -27,7 +27,7 @@ import reducers from "./redux/reducers"
 
 import {
   // get various actions creator to dispatch the actions
-  fetchAllPosts,
+  // fetchAllPosts,
   fetchAllTopics
 } from "./redux/actions"
 

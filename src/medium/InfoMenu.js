@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import TableMenus from '../small/TableMenus'
 
@@ -74,7 +74,7 @@ export default class InfoMenu extends React.Component {
           </TabPane>
         </TabContent>
         </Nav>
-    
+
 
       </div>
 

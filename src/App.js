@@ -4,7 +4,7 @@ import { Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Posts from "./pages/Posts"
 import ConnectedPosts from "./redux/containers/ConnectedPost"
-import Post from "./pages/Post"
+// import Post from "./pages/Post"
 import Topics from "./pages/Topics"
 import Topic from "./pages/Topic"
 
@@ -32,7 +32,6 @@ const App = props => {
       <Route path={`/register`} component={Register} />
       <Route path={`/login`} component={Login} />
       <Route path={`/new`} component={New} />
-      <Route exact path={`/profile`} component={Profile} />
       <Route path={`/profile/:username`} component={Profile} />
       <Route path={`/settings`} component={Settings} />
       <Route path={`/details`} component={Details} />

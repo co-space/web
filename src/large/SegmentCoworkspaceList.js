@@ -4,14 +4,7 @@ import HomeThumbnail from "../medium/HomeThumbnail"
 import Pagination from "../medium/Pagination"
 
 import {
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  Button
+  Row
 } from "reactstrap"
 
 const SegmentCoworkspaceList = () => (<div>

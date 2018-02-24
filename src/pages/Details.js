@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Row, Col, Container} from 'reactstrap'
 import { default as Layout } from "../templates/LayoutDefault"
 import InfoMenu from '../medium/InfoMenu'

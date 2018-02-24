@@ -44,23 +44,23 @@ class SegmentLatestPosts extends Component {
   // console.log(fetchAllPosts)
   // () => fetchAllPosts()
   // fetchAllPosts()
-  loadFetch(){
-    var fetchAllPosts = () => this.props.fetchAllPosts()
-    fetchAllPosts()
-  }
-
-  componentWillMount(){
-    // this.loadFetch()
-    var fetchAllPosts = () => this.props.fetchAllPosts()
-    fetchAllPosts()
-  }
+  // loadFetch(){
+  //   var fetchAllPosts = () => this.props.fetchAllPosts()
+  //   fetchAllPosts()
+  // }
+  //
+  // componentWillMount(){
+  //   // this.loadFetch()
+  //   var fetchAllPosts = () => this.props.fetchAllPosts()
+  //   fetchAllPosts()
+  // }
   // var test = () => fetchAllPosts()
   render(){
     // console.log(this.props.fetchAllPosts);
-    var onClick = this.props.onClick
+    // var onClick = this.props.onClick
     // var fetchAllPosts = () => this.props.fetchAllPosts()
     var posts = this.props.posts
-    var fetchPost = this.props.fetchPost
+    // var fetchPost = this.props.fetchPost
     // this.loadFetch()
     // console.log(fetchAllPosts);
     // var test = () => fetchAllPosts()
