@@ -46,8 +46,8 @@ a:visited, a:hover {
 }
 
 .btn-review {
-  display: flex;
-  align-items: center;
+  margin-top: -22px;
+  margin-bottom: 10px;
 }
 /* -------------------------------------------------------------------------- */
 

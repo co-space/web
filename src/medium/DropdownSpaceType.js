@@ -22,24 +22,9 @@ export default class DropdownSpaceType extends React.Component {
         onChange={this.handleChange}
         placeholder="Space Type"
         options={[
-          { value: 'Jakarta', label: 'Jakarta' },
-          { value: 'JakSel', label: 'Jakarta Selatan' },
+          { value: 'openplan', label: 'Open Plan' },
+          { value: 'privateoffice', label: 'Private Office' },
           { value: 'JakBar', label: 'Jakarta Barat' },
-          { value: 'JakUt', label: 'Jakarta Utara' },
-          { value: 'JakTim', label: 'Jakarta Timur' },
-          { value: 'JakPus', label: 'Jakarta Pusat' },
-          { value: 'Bandung', label: 'Bandung' },
-          { value: 'Semarang', label: 'Semarang' },
-          { value: 'Bogor', label: 'Bogor' },
-          { value: 'Surabaya', label: 'Surabaya' },
-          { value: 'Tangerang', label: 'Tangerang' },
-          { value: 'Medan', label: 'Medan' },
-          { value: 'Makassar', label: 'Makassar' },
-          { value: 'Solo', label: 'Solo' },
-          { value: 'Banjarmasin', label: 'Banjarmasin' },
-          { value: 'Batam', label: 'Batam' },
-          { value: 'Lampung', label: 'Lampung' },
-          { value: 'Malang', label: 'Malang' },
         ]}
       />
     );
