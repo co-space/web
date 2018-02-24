@@ -21,10 +21,14 @@ class Info extends Component {
 
   render() {
     var selected = this.props.selected || {}
+    var amenities = []
+    var photos = []
     if(!isEmpty(selected)){
       var date = new Date(selected.createdAt)
       var month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
       var joinDate = `Joined ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
+      var amenities = selected.amenities
+      var photos = selected.photos
     }
 
     return (<Layout>
@@ -43,7 +47,11 @@ class Info extends Component {
             <b>Amenities</b>
           </h4>
           <Row className="mb-2">
-            <AmenitiesDetail/>
+            {amenities.map((amenity, index) => {
+              return (
+                <AmenitiesDetail key={index} amenity={amenity} />
+              )
+            })}
           </Row>
           <h4>
             <b>Price List</b>
@@ -52,7 +60,7 @@ class Info extends Component {
           <h4>
             <b>Photos</b>
           </h4>
-          <Carousel/>
+          <Carousel photos={photos}/>
           <Input className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
           <Button className="mb-3" color="primary" size="sm" block="block">Submit</Button>
           <h4>

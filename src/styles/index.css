@@ -373,5 +373,8 @@ footer {
   border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
+}
 
+.carousel-size{
+  max-height: 200px;
 }
