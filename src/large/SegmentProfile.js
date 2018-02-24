@@ -7,29 +7,27 @@ import PageTitle from "../medium/PageTitle"
 import PageSubtitle from "../medium/PageSubtitle"
 import Review from "../medium/Review"
 import ReviewHistory from "../medium/ReviewHistory"
-import ThumbnailCospaceList from "../medium/ThumbnailCospaceList"
 import SegmentProfileInfo from "../large/SegmentProfileInfo"
 import SegmentReviewHistory from "../large/SegmentReviewHistory"
+import SegmentCospaceLists from "../large/SegmentCospaceLists"
 
 
 import {Route} from "react-router-dom"
 
 import ActionButton from "../small/ActionButton"
 
-const SegmentProfile = ({profile, props}) => {
-  console.log(`full url${profile.full_url}`);
-  // console.log(props.match.url);
+const SegmentProfile = ({profile}) => {
   return (<Row>
     <Col sm={3} className="p-auto">
       <img className="ava-profile-page mb-3" src={`${process.env.REACT_APP_API_URL}/images/avatars/mhaekal.jpg`} alt=""/>
       <ListGroup>
-        <Link to={`${profile.full_url}/pro`}>
+        <Link to={`${profile.match_url}/pro`}>
           <ListGroupItem>My Profile</ListGroupItem>
         </Link>
-        <Link to={`${profile.full_url}/review`}>
+        <Link to={`${profile.match_url}/review`}>
           <ListGroupItem>My Review</ListGroupItem>
         </Link>
-        <Link to="/test">
+        <Link to={`${profile.match_url}/cospace`}>
           <ListGroupItem>My Cospace</ListGroupItem>
         </Link>
       </ListGroup>
@@ -37,26 +35,9 @@ const SegmentProfile = ({profile, props}) => {
     <Col sm={9}>
       <h1>Welcome, Haekal</h1>
       <hr/> {/* Profile --------------------------------------------------------- */}
-      <Route exact path={`/profile/:id`} component={SegmentProfileInfo}/>
-      <Route exact path={`/profile/:id/review`} component={SegmentReviewHistory}/>
-      <hr/>
-      {/* My Cospace ------------------------------------------------------ */}
-      <h4>
-        <b>My Cospace</b>
-      </h4>
-      <Row>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      <ThumbnailCospaceList/>
-      </Row>
+      <Route exact path={`${profile.match_url}/pro`} component={SegmentProfileInfo}/>
+      <Route exact path={`${profile.match_url}/review`} component={SegmentReviewHistory}/>
+      <Route exact path={`${profile.match_url}/cospace`} component={SegmentCospaceLists}/>
     </Col>
   </Row>)
 }
