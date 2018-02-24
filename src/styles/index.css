@@ -33,6 +33,21 @@ a:visited, a:hover {
   color: black;
 }
 
+.Dropdown_City {
+  width: 15%;
+}
+
+.Dropdown_Member {
+  width: 15%;
+}
+
+.Dropdown_SpaceType {
+  width: 15%;
+}
+
+.btn-review {
+  margin-bottom: 10px;
+}
 /* -------------------------------------------------------------------------- */
 
 .debug {
