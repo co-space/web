@@ -13,7 +13,6 @@ const Details = props => (
           <InfoMenu/>
         </Col>
         <Col xs="4">
-
         </Col>
       </Row>
     </Container>

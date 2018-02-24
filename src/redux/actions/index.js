@@ -14,7 +14,8 @@ import {
   ACCOUNT_LOGOUT,
   SET_LOGIN_TOKEN,
   SET_DECODED_ACCOUNT,
-  SUBMIT_NEW_POST
+  SUBMIT_NEW_POST,
+  GET_ALL_SPACES
   // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
@@ -75,7 +76,7 @@ export const requestAllTopics = payload => ({
   type: `REQUEST_ALL_TOPICS`,
   payload
 })
-
+SUBMIT_NEW_POST
 // fetch topics data from API
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllTopics = payload => dispatch => {
@@ -162,3 +163,28 @@ export const submitNewPostData = payload => ({
   type: SUBMIT_NEW_POST,
   payload
 })
+
+// -----------------------------------------------------------------------------
+
+export const getAllSpaces = (payload, response) => ({
+  type: GET_ALL_SPACES,
+  payload: {
+    data: response
+  }
+})
+
+export const fetchAllSpaces = payload => dispatch => {
+
+  return axios
+    .get(`${process.env.REACT_APP_API_URL}/coworking_spaces`)
+    .then(rawResponse => {
+      return rawResponse.data
+    })
+    .then(response => {
+      // console.log(dispatch(saveAllPosts(payload, response)));
+      return dispatch(getAllSpaces(payload,response.data))
+      // console.log(getAllSpaces(payload,response.data));
+    })
+
+  // dispatch(getAllSpaces(payload,"test"))
+}

@@ -14,8 +14,7 @@ var settings = {
 };
 
 const CarouselImg = () => (
-
-  <Slider {...settings} className="slidercaro mb-5">
+  <Slider {...settings} className="slidercaro mb-4">
          <div>
            <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro1.jpg`} alt="Caroosel 1"/>
          </div>

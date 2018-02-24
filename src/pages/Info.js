@@ -7,7 +7,7 @@ import Carousel from "../medium/Carousel"
 import Review from "../medium/Review"
 import InfoMenu from "../medium/InfoMenu"
 
-const Topic = ({match}) => {
+const Info = ({match}) => {
   const topic = {
     id: match.params.id
   }
@@ -28,27 +28,17 @@ const Topic = ({match}) => {
         </h4>
         <Row className="mb-2">
           <AmenitiesDetail/>
-          <AmenitiesDetail/>
-          <AmenitiesDetail/>
-          <AmenitiesDetail/>
-          <AmenitiesDetail/>
-          <AmenitiesDetail/>
-          <AmenitiesDetail/>
-          <AmenitiesDetail/>
         </Row>
-
         <h4>
           <b>Price List</b>
         </h4>
         <InfoMenu/>
-
         <h4>
           <b>Photos</b>
         </h4>
         <Carousel/>
         <Input className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
         <Button className="mb-3" color="primary" size="sm" block="block">Submit</Button>
-
         <h4>
           <b>32 Reviews</b>
         </h4>
@@ -64,10 +54,8 @@ const Topic = ({match}) => {
       <Col sm={4}>
         <ThumbnailBook/>
       </Col>
-
     </Row>
-
   </Layout>)
 }
 
-export default Topic
+export default Info

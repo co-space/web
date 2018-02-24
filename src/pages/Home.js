@@ -2,7 +2,7 @@ import React from "react"
 import { default as Layout } from "../templates/LayoutDefault"
 
 import SegmentCoworkspaceList from "../large/SegmentCoworkspaceList"
-
+import ConnectedCoworkspaceList from "../redux/containers/ConnectedCoworkspaceList"
 import CarouselImg from "../medium/CarouselImg"
 // import DropdownGroup from '../large/DropdownGroup'
 
@@ -13,7 +13,7 @@ const Home = props => (
     <CarouselImg />
     <DropdownGrup />
 
-  <SegmentCoworkspaceList/>
+  <ConnectedCoworkspaceList/>
   {/* <DropdownGroup /> */}
     {/*}<ConnectedFeaturedPosts />
     <ConnectedLatestPosts />*/}
