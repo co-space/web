@@ -1,7 +1,8 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import Bookform from "../medium/Bookform"
+import { Link } from 'react-router-dom'
+import Bookform from "../small/Bookform"
 
 export default class BookModal extends React.Component {
   constructor(props) {
@@ -24,9 +25,7 @@ export default class BookModal extends React.Component {
       <div>
         <Button outline color="success" size="sm" onClick={this.toggle}>Book now !</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Room Reservation</ModalHeader>
           <ModalBody>
-
             <Bookform/>
           </ModalBody>
           <ModalFooter>

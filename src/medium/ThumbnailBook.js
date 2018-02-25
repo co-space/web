@@ -1,6 +1,6 @@
 import React from "react"
 // import PropTypes from "prop-types"
-import BookModal from "../small/BookModal"
+import BookModal from "../medium/BookModal"
 
 import {
   Card,
