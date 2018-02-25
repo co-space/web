@@ -1,7 +1,7 @@
 import {Row, Col} from "reactstrap"
 import React from "react"
 
-const SegmentProfileInfo = ({profile}) => {
+const SegmentProfileInfo = (props) => {
   return (<div>
     <h4>
       <b>Profile</b>
@@ -11,7 +11,7 @@ const SegmentProfileInfo = ({profile}) => {
         Name
       </Col>
       <Col sm={8}>
-        Muhammad Haekal
+        {props.name}
       </Col>
     </Row>
     <Row className="mb-3">
@@ -27,7 +27,7 @@ const SegmentProfileInfo = ({profile}) => {
         About Me
       </Col>
       <Col sm={8}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, commodi asperiores quisquam soluta amet nemo omnis nihil, quam, velit atque nesciunt voluptatem obcaecati quas natus. Necessitatibus officiis non, magnam qui?
+        {props.bio}
       </Col>
     </Row>
   </div>)

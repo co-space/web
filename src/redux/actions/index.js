@@ -16,14 +16,17 @@ import {
   SET_DECODED_ACCOUNT,
   SUBMIT_NEW_POST,
   GET_ALL_SPACES,
-  GET_ONE_SPACE
+  GET_ONE_SPACE,
+  GET_USER_PROFILE,
+  GET_USER_REVIEW_HISTORY,
+  GET_USER_COSPACE_LIST
   // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
 } from "./types"
 
 // dummy data from initialState
-import { topics } from "../stores"
+import {topics} from "../stores"
 
 // -----------------------------------------------------------------------------
 
@@ -36,30 +39,22 @@ export const saveAllPosts = (payload, response) => ({
   }
 })
 
-export const requestAllPosts = payload => ({
-  type: `REQUEST_ALL_POSTS`,
-  payload
-})
+export const requestAllPosts = payload => ({type: `REQUEST_ALL_POSTS`, payload})
 
 // fetch posts data from API
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllPosts = payload => dispatch => {
   dispatch(requestAllPosts(payload))
   // console.log(dispatch(requestAllPosts(payload)));
-  return axios
-    .get(`${process.env.REACT_APP_API_URL}/posts`)
-    .then(rawResponse => {
-      return rawResponse.data
-    })
-    .then(response => {
-      // console.log(dispatch(saveAllPosts(payload, response)));
-      return dispatch(saveAllPosts(payload, response))
-    })
+  return axios.get(`${process.env.REACT_APP_API_URL}/posts`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    // console.log(dispatch(saveAllPosts(payload, response)));
+    return dispatch(saveAllPosts(payload, response))
+  })
 }
-
-export const getAllPosts = () => ({
-  type: GET_ALL_POSTS
-})
+GET_ONE_SPACE
+export const getAllPosts = () => ({type: GET_ALL_POSTS})
 
 // -----------------------------------------------------------------------------
 // fetch = request => save
@@ -73,10 +68,7 @@ export const saveAllTopics = (payload, response) => ({
   }
 })
 
-export const requestAllTopics = payload => ({
-  type: `REQUEST_ALL_TOPICS`,
-  payload
-})
+export const requestAllTopics = payload => ({type: `REQUEST_ALL_TOPICS`, payload})
 SUBMIT_NEW_POST
 // fetch topics data from API
 // after finished, call SAVE_ALL_POSTS action
@@ -86,9 +78,7 @@ export const fetchAllTopics = payload => dispatch => {
   return dispatch(saveAllTopics(payload, response))
 }
 
-export const getAllTopics = () => ({
-  type: GET_ALL_TOPICS
-})
+export const getAllTopics = () => ({type: GET_ALL_TOPICS})
 
 // -----------------------------------------------------------------------------
 
@@ -108,64 +98,37 @@ export const fetchPost = payload => dispatch => {
   // dispatch(requestAllPosts(payload))
   // console.log(dispatch(requestAllPosts(payload)));
   // console.log(payload);
-  return axios
-    .get(`${process.env.REACT_APP_API_URL}/posts/${payload}`)
-    .then(rawResponse => {
-      return rawResponse.data
-    })
-    .then(response => {
-      // console.log(dispatch(saveAllPosts(payload, response)));
-      return dispatch(selectPost(payload, response))
-    })
+  return axios.get(`${process.env.REACT_APP_API_URL}/posts/${payload}`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    // console.log(dispatch(saveAllPosts(payload, response)));
+    return dispatch(selectPost(payload, response))
+  })
 }
 
-export const selectTopic = payload => ({
-  type: SELECT_TOPIC,
-  payload
-})
+export const selectTopic = payload => ({type: SELECT_TOPIC, payload})
 
-export const selectProfile = payload => ({
-  type: SELECT_PROFILE,
-  payload
-})
+export const selectProfile = payload => ({type: SELECT_PROFILE, payload})
 
 // -----------------------------------------------------------------------------
 
-export const submitRegisterData = payload => ({
-  type: ACCOUNT_REGISTER,
-  payload
-})
+export const submitRegisterData = payload => ({type: ACCOUNT_REGISTER, payload})
 
-export const submitLoginData = payload => ({
-  type: ACCOUNT_LOGIN,
-  payload
-})
+export const submitLoginData = payload => ({type: ACCOUNT_LOGIN, payload})
 
-export const logout = payload => ({
-  type: ACCOUNT_LOGOUT,
-  payload
-})
+export const logout = payload => ({type: ACCOUNT_LOGOUT, payload})
 
 // -----------------------------------------------------------------------------
 
-export const setToken = payload => ({
-  type: SET_LOGIN_TOKEN,
-  payload
-})
+export const setToken = payload => ({type: SET_LOGIN_TOKEN, payload})
 
-export const setDecodedAccount = payload => ({
-  type: SET_DECODED_ACCOUNT,
-  payload
-})
+export const setDecodedAccount = payload => ({type: SET_DECODED_ACCOUNT, payload})
 
 // -----------------------------------------------------------------------------
 
-export const submitNewPostData = payload => ({
-  type: SUBMIT_NEW_POST,
-  payload
-})
+export const submitNewPostData = payload => ({type: SUBMIT_NEW_POST, payload})
 
-// -----------------------------------------------------------------------------
+// GET ALL COWORKING SPACE LIST-----------------------------------------------------------------------------
 
 export const getAllSpaces = (payload, response) => ({
   type: GET_ALL_SPACES,
@@ -176,15 +139,13 @@ export const getAllSpaces = (payload, response) => ({
 
 export const fetchAllSpaces = payload => dispatch => {
 
-  return axios
-    .get(`${process.env.REACT_APP_API_URL}/coworking_spaces`)
-    .then(rawResponse => {
-      return rawResponse.data
-    })
-    .then(response => {
-      return dispatch(getAllSpaces(payload,response.data))
-    })
+  return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    return dispatch(getAllSpaces(payload, response.data))
+  })
 }
+// DETAIL COWORKING SPACE INFO-----------------------------------------------------------------------------
 
 export const getOneSpace = (response) => ({
   type: GET_ONE_SPACE,
@@ -194,15 +155,64 @@ export const getOneSpace = (response) => ({
 })
 
 export const fetchOneSpace = payload => dispatch => {
+  return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces/${payload}`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    return dispatch(getOneSpace(response.data))
+  })
+}
+// GET ONE USER PROFILE -----------------------------------------------------------------------------
 
-  return axios
-    .get(`${process.env.REACT_APP_API_URL}/coworking_spaces/${payload}`)
-    .then(rawResponse => {
-      return rawResponse.data
-    })
-    .then(response => {
-      return dispatch(getOneSpace(response.data))
-    })
-  // console.log(`current payload .... ${payload}`);
-  // console.log(getOneSpace("test"));
+export const getOneProfile = (response) => ({
+  type: GET_USER_PROFILE,
+  payload: {
+    data: response
+  }
+})
+
+export const fetchUserProfile = payload => dispatch => {
+  console.log(payload);
+  return axios.get(`${process.env.REACT_APP_API_URL}/accounts/${payload}`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    return dispatch(getOneProfile(response.data))
+  })
+}
+
+// GET USER REVIEW HISTORY  -----------------------------------------------------------------------------
+
+export const getReviewHistory = (response) => ({
+  type: GET_USER_REVIEW_HISTORY,
+  payload: {
+    data: response
+  }
+})
+
+export const fetchUserReviews = payload => dispatch => {
+    // console.log(payload);
+  return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces/review_history/${payload}`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    return dispatch(getReviewHistory(response.data))
+  })
+}
+
+// GET USER REVIEW HISTORY  -----------------------------------------------------------------------------
+
+export const getCospaceList = (response) => ({
+  type: GET_USER_COSPACE_LIST,
+  payload: {
+    data: response
+  }
+})
+
+export const fetchCospaceList = payload => dispatch => {
+    // console.log(payload);
+  return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces/get_cospaces_by_user/${payload}`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    return dispatch(getCospaceList(response.data))
+  })
+  // console.log(getCospaceList("selected_cospace_list"));
+  // return dispatch(getCospaceList("selected_cospace_list"))
 }

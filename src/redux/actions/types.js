@@ -15,9 +15,15 @@ export const ACCOUNT_LOGOUT = `ACCOUNT_LOGOUT`
 
 export const SET_LOGIN_TOKEN = `SET_LOGIN_TOKEN`
 export const SET_DECODED_ACCOUNT = `SET_DECODED_ACCOUNT`
-
+// cospace action types -------------------------------------------------------
 export const GET_ALL_SPACES = `GET_ALL_SPACES`
 export const GET_ONE_SPACE = `GET_ONE_SPACE`
+export const GET_USER_PROFILE = `GET_USER_PROFILE`
+
+export const GET_USER_REVIEW_HISTORY = `GET_USER_REVIEW_HISTORY`
+export const GET_USER_COSPACE_LIST = `GET_USER_COSPACE_LIST`
+
+
 
 export const SUBMIT_NEW_POST = `SUBMIT_NEW_POST`
 

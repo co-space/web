@@ -19,16 +19,21 @@ class Info extends Component {
     this.fetchOneSpace(this.id)
   }
 
+  
+
   render() {
     var selected = this.props.selected || {}
     var amenities = []
     var photos = []
+    var reviews = []
     if(!isEmpty(selected)){
       var date = new Date(selected.createdAt)
       var month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
       var joinDate = `Joined ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
       var amenities = selected.amenities
       var photos = selected.photos
+      var reviews = selected.reviews
+      console.log(reviews);
     }
 
     return (<Layout>
@@ -66,14 +71,19 @@ class Info extends Component {
           <h4>
             <b>32 Reviews</b>
           </h4>
-          <Review/>
-          <Review/>
-          <Review/>
-          <Review/>
-          <Review/>
-          <Review/>
-          <Review/>
-          <Review/>
+          {
+            reviews.map((review, index) => {
+              var date = new Date(review.post_date)
+              var month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+              var strDate = `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
+
+              return (<Review
+                name={review._account.name}
+                photo={review._account.profile_picture}
+                review={review.review}
+                date={strDate}/>)
+            })
+          }
         </Col>
         <Col sm={4}>
           <ThumbnailBook/>
