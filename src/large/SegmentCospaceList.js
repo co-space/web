@@ -21,8 +21,7 @@ class SegmentCospaceList extends Component{
   }
 
   componentWillMount(){
-    // console.log(this.props.fetchCospaceList);
-    this.props.fetchCospaceList("1")
+    this.props.fetchCospaceList(this.props.id)
   }
 
   render(){
@@ -43,6 +42,7 @@ class SegmentCospaceList extends Component{
               name={selected_cospace.name}
               city={selected_cospace.location.city}
               photo={selected_cospace.photos[0]}
+              id={selected_cospace.id}
               />
             )
           })}

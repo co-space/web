@@ -19,7 +19,7 @@ class Info extends Component {
     this.fetchOneSpace(this.id)
   }
 
-  
+
 
   render() {
     var selected = this.props.selected || {}
@@ -34,7 +34,7 @@ class Info extends Component {
       var photos = selected.photos
       var reviews = selected.reviews
       console.log(reviews);
-    }
+    }"/test"
 
     return (<Layout>
       <Row >
@@ -81,7 +81,8 @@ class Info extends Component {
                 name={review._account.name}
                 photo={review._account.profile_picture}
                 review={review.review}
-                date={strDate}/>)
+                date={strDate}
+                id={review._account.id}/>)
             })
           }
         </Col>

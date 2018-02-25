@@ -1,15 +1,17 @@
 import React from 'react';
 import {Card, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
-
+import {Link} from "react-router-dom"
 const defaultReview = {
   _account: "",
   review: "",
   id: ""
 }
 
-const Review = ({name, photo, review, date}) => {
+const Review = ({name, photo, review, date, id}) => {
 
-  return (<div className="mb-3">
+  return (
+    <Link to={`/profile/${id}`}>
+    <div className="mb-3">
     <Card>
       <CardBody>
         <div className="d-flex">
@@ -27,7 +29,9 @@ const Review = ({name, photo, review, date}) => {
         </div>
       </CardBody>
     </Card>
-  </div>);
+    </div>
+    </Link>
+    );
 };
 
 export default Review;

@@ -1,7 +1,9 @@
 import {Card, CardBody} from "reactstrap"
 import React from "react"
+import {Link} from "react-router-dom"
 
-const ThumbnailCospace = ({name, city, photo}) => (<Card className="mb-3">
+const ThumbnailCospace = ({name, city, photo, id}) => (<Link to={`/co/${id}`}>
+  <Card className="mb-3">
   <CardBody>
     <img className="prfile-review-thumb mb-3" src={photo} alt=""/>
     <h4>
@@ -11,6 +13,8 @@ const ThumbnailCospace = ({name, city, photo}) => (<Card className="mb-3">
       <b>{city}</b>
     </h6>
   </CardBody>
-</Card>)
+  </Card>
+  </Link>
+  )
 
 export default ThumbnailCospace
