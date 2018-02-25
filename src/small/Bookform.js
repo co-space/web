@@ -5,14 +5,25 @@ import CalendarInput from './CalendarInput';
 
 export default class Bookform extends React.Component {
   render() {
-    return (
-      <Form>
-
+    return (<Form>
+      <FormGroup>
+        <Input type="name" name="name" id="name-book" placeholder="name"/>
+      </FormGroup>
+      <FormGroup>
+        <Input type="email" name="email" id="email-book" placeholder="email"/>
+      </FormGroup>
+      <FormGroup>
+        <Label for="select-book">Select Room Type</Label>
+        <Input type="select" name="select-book" id="select-book">
+          <option>Hot Desk</option>
+          <option>Dedicated Desk</option>
+          <option>Private Office</option>
+        </Input>
+      </FormGroup><br/>
+      <Form inline="inline">
         <FormGroup>
-
-          <Input type="name" name="name" id="name-book" placeholder="name" />
-        </FormGroup>
-
+          <Input type="people" name="people" id="peopleCount" placeholder="Total Person"/>
+        </FormGroup>&nbsp;&nbsp; {' '}
         <FormGroup>
 
           <Input type="email" name="email" id="email-book" placeholder="email" />
@@ -44,6 +55,6 @@ export default class Bookform extends React.Component {
 
 
       </Form>
-    );
+    </Form>);
   }
 }

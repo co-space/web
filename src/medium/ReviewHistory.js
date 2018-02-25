@@ -1,4 +1,4 @@
-import {Row, Col, Card, CardBody} from "reactstrap"
+import {Row, Col} from "reactstrap"
 
 import Review from "./Review"
 import React from "react"

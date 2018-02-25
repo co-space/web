@@ -13,33 +13,16 @@ var settings = {
   variableWidth: true
 };
 
-const Carousel = () => (
+const Carousel = ({photos}) => (
 
   <Slider {...settings} className="slidercaro mb-4">
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro1.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro2.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro3.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro4.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro5.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro6.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro7.jpg`} alt="Caroosel 1"/>
-         </div>
-         <div>
-           <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro1.jpg`} alt="Caroosel 1"/>
-         </div>
+         {photos.map((photo, index) => {
+           return (
+             <div>
+               <img className="carousel-size" src={photo} alt="Caroosel 1"/>
+             </div>
+           )
+         })}
   </Slider>
 )
 

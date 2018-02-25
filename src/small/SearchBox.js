@@ -1,8 +1,7 @@
 import React from "react"
-import { Form, Input } from "reactstrap"
+import {Input} from "reactstrap"
 
 const SearchBox = props => (
-
       <Input
         className="cta"
         type="text"
