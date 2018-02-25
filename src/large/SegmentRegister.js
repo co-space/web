@@ -13,7 +13,7 @@ const SegmentRegister = props => (
   <Row id="SegmentRegister" className="center text-center">
     <div>
       <Col>
-        <PageTitle>Join Modusin</PageTitle>
+        <PageTitle>Join Co-Space</PageTitle>
       </Col>
       <Col>
         <PageSubtitle>Create an account</PageSubtitle>
