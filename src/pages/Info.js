@@ -60,7 +60,7 @@ class Info extends Component {
           <h4>
             <b>Photos</b>
           </h4>
-          <Carousel photos={photos}/>
+          {(photos.length > 0) ? (<Carousel photos={photos}/>) : (<div></div>)}
           <Input className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
           <Button className="mb-3" color="primary" size="sm" block="block">Submit</Button>
           <h4>
