@@ -5,9 +5,9 @@ import {
   Col,
 } from "reactstrap"
 
-const HomeThumbnail = () => (
+const HomeThumbnail = ({name, photo, id}) => (
   <Col sm={3} className="mb-3">
-    <ThumbnailDetail/>
+    <ThumbnailDetail name={name} photo={photo} id={id}/>
   </Col>
 )
 

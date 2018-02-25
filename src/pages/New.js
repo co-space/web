@@ -2,12 +2,12 @@ import React from "react"
 
 import { default as Layout } from "../templates/LayoutSingle"
 
-import SegmentNewPost from "../large/SegmentNewPost"
+import SegmentNewSpace from "../large/SegmentNewSpace"
 
-const Create = props => (
+const New = props => (
   <Layout>
-    <SegmentNewPost />
+    <SegmentNewSpace />
   </Layout>
 )
 
-export default Create
+export default New

@@ -4,7 +4,7 @@ import {Pagination, PaginationItem, PaginationLink} from "reactstrap"
 
 const ListPagination = () => (<Pagination className="mt-2">
   <PaginationItem>
-    <PaginationLink previous="previous" href="#"/>
+    <PaginationLink previous={true} href="#"/>
   </PaginationItem>
   <PaginationItem>
     <PaginationLink href="#">
@@ -32,7 +32,7 @@ const ListPagination = () => (<Pagination className="mt-2">
     </PaginationLink>
   </PaginationItem>
   <PaginationItem>
-    <PaginationLink next="next" href="#"/>
+    <PaginationLink next={true} href="#"/>
   </PaginationItem>
 </Pagination>)
 

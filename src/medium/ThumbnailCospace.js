@@ -1,6 +1,4 @@
 import {Card, CardBody} from "reactstrap"
-
-import Review from "./Review"
 import React from "react"
 
 const ThumbnailCospace = () => (<Card className="mb-3">

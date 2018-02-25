@@ -3,10 +3,6 @@ import React from "react"
 import {Link} from "react-router-dom"
 import {Row, Col, ListGroup, ListGroupItem} from "reactstrap"
 
-import PageTitle from "../medium/PageTitle"
-import PageSubtitle from "../medium/PageSubtitle"
-import Review from "../medium/Review"
-import ReviewHistory from "../medium/ReviewHistory"
 import SegmentProfileInfo from "../large/SegmentProfileInfo"
 import SegmentReviewHistory from "../large/SegmentReviewHistory"
 import SegmentCospaceLists from "../large/SegmentCospaceLists"
@@ -21,7 +17,7 @@ const SegmentProfile = ({profile}) => {
     <Col sm={3} className="p-auto">
       <img className="ava-profile-page mb-3" src={`${process.env.REACT_APP_API_URL}/images/avatars/mhaekal.jpg`} alt=""/>
       <ListGroup>
-        <Link to={`${profile.match_url}/pro`}>
+        <Link to={`${profile.match_url}`}>
           <ListGroupItem>My Profile</ListGroupItem>
         </Link>
         <Link to={`${profile.match_url}/review`}>
@@ -35,9 +31,9 @@ const SegmentProfile = ({profile}) => {
     <Col sm={9}>
       <h1>Welcome, Haekal</h1>
       <hr/> {/* Profile --------------------------------------------------------- */}
-      <Route exact path={`${profile.match_url}/pro`} component={SegmentProfileInfo}/>
-      <Route exact path={`${profile.match_url}/review`} component={SegmentReviewHistory}/>
-      <Route exact path={`${profile.match_url}/cospace`} component={SegmentCospaceLists}/>
+      <Route exact path={`${profile.match_url}`} component={SegmentProfileInfo}/>
+      <Route path={`${profile.match_url}/review`} component={SegmentReviewHistory}/>
+      <Route path={`${profile.match_url}/cospace`} component={SegmentCospaceLists}/>
     </Col>
   </Row>)
 }

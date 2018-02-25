@@ -6,10 +6,13 @@ import { combineReducers } from "redux"
 
 import posts from "./posts"
 import topics from "./topics"
+import spaces from "./spaces"
+
 
 const rootReducer = combineReducers({
   posts,
-  topics
+  topics,
+  spaces
 })
 
 export default rootReducer
