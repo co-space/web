@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import CalendarInput from './CalendarInput';
 
 
 export default class Bookform extends React.Component {
@@ -27,19 +28,17 @@ export default class Bookform extends React.Component {
         </FormGroup><br/>
 
 
-        <Form inline>
-        <FormGroup>
 
+        <FormGroup>
           <Input type="people" name="people" id="peopleCount" placeholder="Total Person" />
         </FormGroup>&nbsp;&nbsp;
-        {' '}
+
         <FormGroup>
 
-          <Input type="password" name="password" id="examplePassword" placeholder="Pick a date" />
+          <CalendarInput/>
         </FormGroup>
-        {'  '}
 
-      </Form>
+
 
 
 

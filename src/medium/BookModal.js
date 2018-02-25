@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Link } from 'react-router-dom'
-import Bookform from "../medium/Bookform"
+import Bookform from "../small/Bookform"
 
 export default class BookModal extends React.Component {
   constructor(props) {

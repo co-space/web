@@ -42,6 +42,7 @@ import App from "./App"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/index.css"
+import 'react-day-picker/lib/style.css';
 // import "./styles/debug.css"
 
 // -----------------------------------------------------------------------------
