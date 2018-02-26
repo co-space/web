@@ -232,9 +232,9 @@ a:visited, a:hover {
 /* -------------------------------------------------------------------------- */
 
 .cta {
-  padding: 6px;
+  /*padding: 6px;*/
   margin-top: 23px;
-  margin-right: 8px;
+  /*margin-right: 8px;*/
   margin-left: 12px;
   /* padding: 4px;
   margin: 6px;
@@ -357,7 +357,8 @@ footer {
   border-radius: 30px;
   height: 32px;
   width: 32px;
-  margin-top: auto;
+  margin-right: 20px;
+  /*margin-top: auto;*/
   margin-bottom: auto;
 }
 

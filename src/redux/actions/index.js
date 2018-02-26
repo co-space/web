@@ -19,7 +19,8 @@ import {
   GET_ONE_SPACE,
   GET_USER_PROFILE,
   GET_USER_REVIEW_HISTORY,
-  GET_USER_COSPACE_LIST
+  GET_USER_COSPACE_LIST,
+  SET_TOKEN
   // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
@@ -120,7 +121,7 @@ export const logout = payload => ({type: ACCOUNT_LOGOUT, payload})
 
 // -----------------------------------------------------------------------------
 
-export const setToken = payload => ({type: SET_LOGIN_TOKEN, payload})
+// export const setToken = payload => ({type: SET_LOGIN_TOKEN, payload})
 
 export const setDecodedAccount = payload => ({type: SET_DECODED_ACCOUNT, payload})
 
@@ -215,4 +216,17 @@ export const fetchCospaceList = payload => dispatch => {
   })
   // console.log(getCospaceList("selected_cospace_list"));
   // return dispatch(getCospaceList("selected_cospace_list"))
+}
+
+// SET AUTH TOKEN  -----------------------------------------------------------------------------
+
+export const setLoginToken = (response) => ({
+  type: SET_TOKEN,
+  payload: {
+    data: response
+  }
+})
+
+export const setToken = payload => dispatch => {
+  return dispatch(setLoginToken(payload))
 }

@@ -1,10 +1,10 @@
 import { connect } from "react-redux"
 
-import SegmentCTAHeader from "../../large/SegmentCTAHeader"
+import AuthLoginForm from "../../medium/AuthLoginForm"
 
 import {
   // get various actions creator to dispatch the actions
-  fetchOneSpace
+  setToken
 } from "../actions"
 
 const mapStateToProps = (state, ownProps = {}) => {
@@ -14,16 +14,16 @@ const mapStateToProps = (state, ownProps = {}) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchOneSpace: (test) => dispatch(fetchOneSpace(test))
+  setToken: (param) => dispatch(setToken(param))
 })
 
 // create container by connecting
 // the store's state to SegmentLatestPosts' props
-const ConnectedCTAHeader = connect(
+const ConnectedAuthLoginForm = connect(
   // Given Redux state, return props
   mapStateToProps,
   // Given Redux dispatch, return callback props
   mapDispatchToProps
-)(SegmentCTAHeader)
+)(AuthLoginForm)
 
-export default ConnectedCTAHeader
+export default ConnectedAuthLoginForm

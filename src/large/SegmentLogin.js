@@ -8,6 +8,8 @@ import PageSubtitle from "../medium/PageSubtitle"
 import PageText from "../medium/PageText"
 
 import AuthLoginForm from "../medium/AuthLoginForm"
+import ConnectedAuthLoginForm from "../redux/containers/ConnectedAuthLoginForm"
+
 
 const SegmentLogin = props => (
   <Row id="SegmentLogin" className="center text-center" xs={12} md={8}>
@@ -19,7 +21,7 @@ const SegmentLogin = props => (
         <PageSubtitle>Login to access your settings</PageSubtitle>
       </Col>
       <Col xs={12}>
-        <AuthLoginForm />
+        <ConnectedAuthLoginForm />
       </Col>
       <Col xs={12}>
         <PageText>

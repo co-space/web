@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 
-import SegmentCTAHeader from "../../large/SegmentCTAHeader"
+import Info from "../../pages/Info"
 
 import {
   // get various actions creator to dispatch the actions
@@ -9,7 +9,7 @@ import {
 
 const mapStateToProps = (state, ownProps = {}) => {
   return {
-    token : state.auth.token
+    selected : state.spaces.selected_space
   }
 }
 
@@ -19,11 +19,11 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 // create container by connecting
 // the store's state to SegmentLatestPosts' props
-const ConnectedCTAHeader = connect(
+const ConnectedInfo = connect(
   // Given Redux state, return props
   mapStateToProps,
   // Given Redux dispatch, return callback props
   mapDispatchToProps
-)(SegmentCTAHeader)
+)(Info)
 
-export default ConnectedCTAHeader
+export default ConnectedInfo
