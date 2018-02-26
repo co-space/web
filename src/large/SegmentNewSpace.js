@@ -4,10 +4,13 @@ import {
   Row,
   Col,
   Input,
-  FormText,
   Button,
   Label
 } from "reactstrap"
+import ReactFilestack, { client } from 'filestack-react';
+
+//API_KEY filestack
+const API_KEY="Avsgm8lbeTA2U9LnX68j5z"
 
 const SegmentNewPost = props => (<Row id="SegmentNewPost" className="center">
   <Col xs={12} md={8}>
@@ -30,12 +33,21 @@ const SegmentNewPost = props => (<Row id="SegmentNewPost" className="center">
       <Input type="checkbox"/>
       Gym &nbsp;&nbsp;
     </Label>
-    <Input type="text" name="cospaceImage" id="cospaceImage" placeholder="Insert JPG/PNG formatted image URL ..."/>
+    {/* <Input type="text" name="cospaceImage" id="cospaceImage" placeholder="Insert JPG/PNG formatted image URL ..."/>
     <FormText className="mb-3" color="muted">
       Example: https://google.co.id/images/branding/logo/googlelogo_color.png
-    </FormText>
+    </FormText> */}
+    <ReactFilestack
+       apikey={API_KEY}
+       onSuccess={(response) => console.log(response)}
+       render={({ onPick }) => (
+    <div className="mb-3">
+      <strong>Upload Image</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+      <Button outline color="info"  size="sm" onClick={onPick}>Upload</Button>
+    </div>
+  )}
+/>
     <Button color="primary" size="sm" block="block">Submit</Button>
-
   </Col>
 </Row>)
 
