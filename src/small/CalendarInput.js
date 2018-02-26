@@ -1,6 +1,6 @@
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { Input } from 'reactstrap';
+import { Input, Form } from 'reactstrap';
 import 'react-day-picker/lib/style.css';
 
 export default class CalendarInput extends React.Component {
@@ -23,7 +23,7 @@ export default class CalendarInput extends React.Component {
     return (
       <div>
         <p>
-          {!selectedDay && '🤔 Type or pick a valid day'}
+          {!selectedDay && '🤔 Pick a date'}
           {selectedDay && isDisabled && '😡 This day is disabled'}
           {selectedDay &&
             !isDisabled &&

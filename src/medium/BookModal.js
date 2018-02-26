@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import Bookform from "../small/Bookform"
+import PageSubtitle from "./PageSubtitle"
 
 export default class BookModal extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class BookModal extends React.Component {
       <div>
         <Button outline color="success" size="sm" onClick={this.toggle}>Book now !</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <PageSubtitle>Make reservation for your favourite space now !</PageSubtitle>
           <ModalBody>
             <Bookform/>
           </ModalBody>
