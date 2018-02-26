@@ -4,7 +4,8 @@ import AuthLoginForm from "../../medium/AuthLoginForm"
 
 import {
   // get various actions creator to dispatch the actions
-  setToken
+  setToken,
+  getActiveUser
 } from "../actions"
 
 const mapStateToProps = (state, ownProps = {}) => {
@@ -14,7 +15,8 @@ const mapStateToProps = (state, ownProps = {}) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  setToken: (param) => dispatch(setToken(param))
+  setToken: (param) => dispatch(setToken(param)),
+  getActiveUser: (param) => dispatch(getActiveUser(param))
 })
 
 // create container by connecting

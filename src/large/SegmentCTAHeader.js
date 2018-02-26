@@ -51,6 +51,9 @@ class SegmentCTAHeader extends Component {
 
   componentWillMount(){
     console.log(this.props.token);
+    if(this.props.token){
+      
+    }
   }
 
   render(){

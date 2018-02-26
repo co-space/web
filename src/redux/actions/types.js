@@ -24,6 +24,11 @@ export const GET_USER_REVIEW_HISTORY = `GET_USER_REVIEW_HISTORY`
 export const GET_USER_COSPACE_LIST = `GET_USER_COSPACE_LIST`
 
 export const SET_TOKEN = `SET_TOKEN`
+export const SET_ACTIVE_USER = `SET_ACTIVE_USER`
+
+// export const ADD_REVIEW = `ADD_REVIEW`
+
+
 
 
 export const SUBMIT_NEW_POST = `SUBMIT_NEW_POST`

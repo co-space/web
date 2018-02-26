@@ -60,6 +60,7 @@ class AuthLoginForm extends Component {
     var email = this.state.email
     var password = this.state.password
     var setToken = this.props.setToken
+    var getActiveUser = this.props.getActiveUser
 
     axios.post(`${process.env.REACT_APP_API_URL}/accounts/login`, {
       email: email,
@@ -67,6 +68,7 @@ class AuthLoginForm extends Component {
     }).then(function(response) {
       if (response.data.token) {
         setToken(response.data.token)
+        getActiveUser(response.data)
         return (<Redirect to="/dashboard"/>)
       } else {
         console.log("username / password wrong");
@@ -77,7 +79,8 @@ class AuthLoginForm extends Component {
   }
 
   componentWillMount(){
-    // console.log(this.props.setToken);
+    // console.log(this.props.fetchActiveUser);
+    // this.props.fetchActiveUser()
     // this.props.setToken({email: "dzaky@dzaky.com", password: "dzaky"})
   }
 

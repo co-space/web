@@ -9,7 +9,9 @@ import {
 
 const mapStateToProps = (state, ownProps = {}) => {
   return {
-    selected : state.spaces.selected_space
+    selected : state.spaces.selected_space,
+    active_user: state.auth.active_user,
+    token: state.auth.token
   }
 }
 

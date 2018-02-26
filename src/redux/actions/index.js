@@ -20,8 +20,9 @@ import {
   GET_USER_PROFILE,
   GET_USER_REVIEW_HISTORY,
   GET_USER_COSPACE_LIST,
-  SET_TOKEN
-  // LOADING_TRUE,
+  SET_TOKEN,
+  SET_ACTIVE_USER
+    // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
 } from "./types"
@@ -190,7 +191,7 @@ export const getReviewHistory = (response) => ({
 })
 
 export const fetchUserReviews = payload => dispatch => {
-    // console.log(payload);
+  // console.log(payload);
   return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces/review_history/${payload}`).then(rawResponse => {
     return rawResponse.data
   }).then(response => {
@@ -208,7 +209,7 @@ export const getCospaceList = (response) => ({
 })
 
 export const fetchCospaceList = payload => dispatch => {
-    // console.log(payload);
+  // console.log(payload);
   return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces/get_cospaces_by_user/${payload}`).then(rawResponse => {
     return rawResponse.data
   }).then(response => {
@@ -229,4 +230,20 @@ export const setLoginToken = (response) => ({
 
 export const setToken = payload => dispatch => {
   return dispatch(setLoginToken(payload))
+}
+
+// SET ACTIVE USER  -----------------------------------------------------------------------------
+
+export const setActiveUser = (payload) => ({
+  type: SET_ACTIVE_USER,
+  payload: {
+    name: payload.name,
+    bio: payload.bio,
+    profile_picture: payload.profile_picture,
+    id: payload.id
+  }
+})
+
+export const getActiveUser = payload => dispatch => {
+  return dispatch(setActiveUser(payload))
 }
