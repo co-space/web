@@ -45,16 +45,21 @@ class Info extends Component {
     // console.log();
     var token = this.props.token
     var fetchOne = this.fetchOne
-    axios.post(`${process.env.REACT_APP_API_URL}/coworking_spaces/add_review/${this.id}`, {
-      review: review,
-      token: token
-    }).then(function(response) {
-      console.log('saved successfully')
-      fetchOne()
-    }).catch(error => {
-      console.log(error.response)
-    });
-    this.setState({review: ''})
+
+    if(review.length > 20){
+      axios.post(`${process.env.REACT_APP_API_URL}/coworking_spaces/add_review/${this.id}`, {
+        review: review,
+        token: token
+      }).then(function(response) {
+        console.log('saved successfully')
+        fetchOne()
+      }).catch(error => {
+        console.log(error.response)
+      });
+      this.setState({review: ''})
+    }
+
+    
   }
 
   // handleKeyPress = (event) => {
