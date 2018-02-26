@@ -107,8 +107,6 @@ class Info extends Component {
           <p className="text-justify">{selected.overview}</p>
           <h4>
             <b>Amenities</b>
-            this.handleChange = this.handleChange.bind(this);
-
           </h4>
           <Row className="mb-2">
             {
