@@ -1,7 +1,8 @@
 import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import TableMenus from '../small/TableMenus'
+import TableMenus from '../small/TableMenus';
+import './medium.css'
 
 export default class InfoMenu extends React.Component {
   constructor(props) {
@@ -25,7 +26,8 @@ export default class InfoMenu extends React.Component {
       <div>
 
         <Nav tabs>
-          <NavItem>
+
+          <NavItem className="nav-info1">
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
@@ -33,7 +35,7 @@ export default class InfoMenu extends React.Component {
               Hot Desk
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="nav-info2">
             <NavLink
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggle('2'); }}
@@ -41,7 +43,7 @@ export default class InfoMenu extends React.Component {
               Dedicated Desk
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="nav-info3">
             <NavLink
               className={classnames({ active: this.state.activeTab === '3' })}
               onClick={() => { this.toggle('3'); }}
@@ -49,6 +51,7 @@ export default class InfoMenu extends React.Component {
               Private Office
             </NavLink>
           </NavItem>
+
 
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
