@@ -1,10 +1,11 @@
 import React from 'react';
 import { Table } from 'reactstrap';
+import './small.css'
 
 export default class TableMenus extends React.Component {
   render() {
     return (
-      <Table bordered hover>
+      <Table bordered hover className="table-menu">
         <thead>
           <tr>
             <th>People</th>
