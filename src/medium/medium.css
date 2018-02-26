@@ -1,0 +1,19 @@
+.nav-info1{
+  background: linear-gradient(to bottom right, #2ed573, #7bed9f);
+  border-radius: 5px;
+}
+
+.nav-info2{
+  background: #7bed9f;
+  border-radius: 5px;
+}
+
+.nav-info3{
+  background: linear-gradient(to right, #7bed9f, #2ed573);
+  border-radius: 5px;
+}
+
+.table-menu{
+    background: linear-gradient(to top right, #7bed9f, #2ed573);
+    border-radius: 5px;
+}
