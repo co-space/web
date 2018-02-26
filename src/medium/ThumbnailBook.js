@@ -10,9 +10,9 @@ import {
   CardTitle
 } from "reactstrap"
 
-const Thumbnail = () => (
+const Thumbnail = ({photos}) => (
     <Card>
-      <CardImg top="top" width="100%" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt="Card image cap"/>
+      <CardImg top="top" width="100%" src={photos[0]} alt="Card image cap"/>
       <CardBody>
         <CardTitle>Impact Hub</CardTitle>
         <div className="d-flex justify-content-between">

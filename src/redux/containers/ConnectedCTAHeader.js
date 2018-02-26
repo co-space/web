@@ -9,7 +9,8 @@ import {
 
 const mapStateToProps = (state, ownProps = {}) => {
   return {
-    token : state.auth.token
+    token : state.auth.token,
+    active_user: state.auth.active_user
   }
 }
 

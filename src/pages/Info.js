@@ -59,7 +59,7 @@ class Info extends Component {
       this.setState({review: ''})
     }
 
-    
+
   }
 
   // handleKeyPress = (event) => {
@@ -132,7 +132,7 @@ class Info extends Component {
               ? (<Carousel photos={photos}/>)
               : (<div></div>)
           }
-          <Input value={this.state.review}  onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
+          <Input value={this.state.review}  onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences... (min. 20 char)"/>
           <Button onClick={this.addReview} className="mb-3" color="primary" size="sm" block="block">Submit</Button>
           <h4>
             <b>{totalReview} Reviews</b>
@@ -161,7 +161,7 @@ class Info extends Component {
           }
         </Col>
         <Col sm={4}>
-          <ThumbnailBook/>
+          <ThumbnailBook photos={photos}/>
         </Col>
 
       </Row>

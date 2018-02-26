@@ -32,24 +32,25 @@ class SegmentProfile extends Component {
     var selected_profile = this.props.selected_profile || {}
     var bio = ""
     var name = ""
+    var profile_picture = ""
     if (!isEmpty(selected_profile)) {
       bio = selected_profile.bio
       name = selected_profile.name
-      console.log(selected_profile);
+      profile_picture = selected_profile.profile_picture
     }
 
     return (<Row>
       <Col sm={3} className="p-auto">
-        <img className="ava-profile-page mb-3" src={`${process.env.REACT_APP_API_URL}/images/avatars/mhaekal.jpg`} alt=""/>
+        <img className="ava-profile-page mb-3" src={profile_picture} alt=""/>
         <ListGroup>
           <Link to={`${match_url}`}>
-            <ListGroupItem>My Profile</ListGroupItem>
+            <ListGroupItem>Profile</ListGroupItem>
           </Link>
           <Link to={`${match_url}/review`}>
-            <ListGroupItem>My Review</ListGroupItem>
+            <ListGroupItem>Review</ListGroupItem>
           </Link>
           <Link to={`${match_url}/cospace`}>
-            <ListGroupItem>My Cospace</ListGroupItem>
+            <ListGroupItem>Cospace</ListGroupItem>
           </Link>
         </ListGroup>
       </Col>
