@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 
-import Info from "../../pages/Info"
+import SegmentNewSpace from "../../large/SegmentNewSpace"
 
 import {
   // get various actions creator to dispatch the actions
@@ -9,7 +9,8 @@ import {
 
 const mapStateToProps = (state, ownProps = {}) => {
   return {
-    selected : state.spaces.selected_space
+    selected : state.spaces.selected_space,
+    token: state.auth.token
   }
 }
 
@@ -19,11 +20,11 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 // create container by connecting
 // the store's state to SegmentLatestPosts' props
-const ConnectedInfo = connect(
+const ConnectedNewSpace = connect(
   // Given Redux state, return props
   mapStateToProps,
   // Given Redux dispatch, return callback props
   mapDispatchToProps
-)(Info)
+)(SegmentNewSpace)
 
-export default ConnectedInfo
+export default ConnectedNewSpace
