@@ -1,8 +1,11 @@
 import React from "react"
 // import PropTypes from "prop-types"
 import BookModal from "./BookModal"
-import '../medium/medium.css'
+import './medium.css'
+import FbShare from '../small/FbShare'
+import TwitterShare from '../small/TwitterShare'
 import Sticky from 'react-sticky-el'
+import {Row, Col} from 'reactstrap'
 
 import {
   Card,
@@ -22,7 +25,17 @@ const Thumbnail = ({photos}) => (
         <div className="d-flex justify-content-between">
         <CardText className="my-auto"><img className="rating-star" src={`${process.env.REACT_APP_API_URL}/images/icons/star.png`} alt="rate-star"/><span className="rating-point">&nbsp;4.5</span></CardText>
         <BookModal/>
-        </div>
+
+        </div><hr/>
+        <p>Or share it to your friends !</p>
+        <Row>
+          <Col sm={6}>
+            <FbShare/>
+          </Col>
+          <Col sm={6}>
+            <TwitterShare/>
+          </Col>
+        </Row>
       </CardBody>
     </Card>
 )
