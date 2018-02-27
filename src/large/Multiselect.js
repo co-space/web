@@ -3,7 +3,7 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
 
-const FLAVOURS = [
+const AMENITIES = [
 	{ label: 'High Speed Wifi 🤘🏻', value: 'highspeedwifi' },
 	{ label: 'Lounge 🤘🏻', value: 'Lounge' },
 	{ label: 'Free Coffee/Tea 🤘🏻', value: 'freecoffetea' },
@@ -53,8 +53,8 @@ export default class Multiselect extends React.Component {
   render() {
     const { crazy, disabled, stayOpen, value } = this.state;
 		// const options = crazy ? WHY_WOULD_YOU : FLAVOURS;
-    const options = FLAVOURS
-    
+    const options = AMENITIES
+
     return (
       <Select
         multi
