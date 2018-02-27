@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const CTAAvatar = ({ to, account }) => {
+const CTAAvatar = ({ to, photo }) => {
   return (
     <span className="cta avatar">
       <Link to={to}>
-        <img src={account.image_url} alt={account.name} />
+        <img src={photo} alt="avatar-image" />
       </Link>
     </span>
   )

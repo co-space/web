@@ -7,9 +7,13 @@ import SearchBox from "../small/SearchBox"
 import CTAButtons from "../medium/CTAButtons"
 import CTAAvatar from "../small/CTAAvatar"
 import NavButtons from "../medium/NavButtons"
+import {isEmpty} from "lodash"
 
+<<<<<<< HEAD
 
 //
+=======
+>>>>>>> master
 const auth = {
   account: {
     name: "M Haidar Hanif",
@@ -18,46 +22,27 @@ const auth = {
   }
 }
 
-// const SegmentCTAHeader = ({ className }) => (
-//   <Row id="SegmentCTAHeader" className={`center ${className}`}>
-//     <Col sm={2}>
-//       <Logo />
-//     </Col>
-//     <Col sm={7}>
-//       <SearchBox />
-//     </Col>
-//     <Col sm={3} className="column right">
-//     {/*<NavButtons />*/}
-//       <CTAAvatar
-//         to={`/profile/${auth.account.username}`}
-//         account={auth.account}
-//       />
-//     </Col>
-//      {/*<Col xs={12} md={4} className="column right">
-//       <CTAButtons />
-//       <CTAAvatar
-//         to={`/profile/${auth.account.username}`}
-//         account={auth.account}
-//       />
-//     </Col>*/}
-//   </Row>
-// )
-//
-// export default SegmentCTAHeader
 
 class SegmentCTAHeader extends Component {
   constructor(props){
     super(props)
   }
 
-  componentWillMount(){
-    console.log(this.props.token);
-    if(this.props.token){
-
-    }
-  }
+  // componentWillMount(){
+  //   console.log(this.props.token);
+  //   if(this.props.token){
+  //
+  //   }
+  // }
 
   render(){
+    var active_user = this.props.active_user || {}
+    var id = ""
+    var photo = ""
+    if(!isEmpty(active_user)){
+      var id = active_user.id
+      var photo = active_user.profile_picture
+    }
     return(
       <Row id="SegmentCTAHeader" className="">
          <Col sm={2}>
@@ -68,8 +53,8 @@ class SegmentCTAHeader extends Component {
          </Col>
          <Col sm={3} className="column right">
          {(this.props.token) ? (<CTAAvatar
-           to={`/profile/${auth.account.username}`}
-           account={auth.account}
+           to={`/profile/${id}`}
+           photo={photo}
          />) : (<NavButtons />)}
 
            {/*<CTAAvatar

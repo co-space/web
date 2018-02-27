@@ -47,16 +47,21 @@ class Info extends Component {
     // console.log();
     var token = this.props.token
     var fetchOne = this.fetchOne
-    axios.post(`${process.env.REACT_APP_API_URL}/coworking_spaces/add_review/${this.id}`, {
-      review: review,
-      token: token
-    }).then(function(response) {
-      console.log('saved successfully')
-      fetchOne()
-    }).catch(error => {
-      console.log(error.response)
-    });
-    this.setState({review: ''})
+
+    if(review.length > 20){
+      axios.post(`${process.env.REACT_APP_API_URL}/coworking_spaces/add_review/${this.id}`, {
+        review: review,
+        token: token
+      }).then(function(response) {
+        console.log('saved successfully')
+        fetchOne()
+      }).catch(error => {
+        console.log(error.response)
+      });
+      this.setState({review: ''})
+    }
+
+
   }
 
   // handleKeyPress = (event) => {
@@ -128,8 +133,10 @@ class Info extends Component {
             (photos.length > 0)
               ? (<Carousel photos={photos}/>)
               : (<div></div>)
-          }<hr/>
-          <Input value={this.state.review}  onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences..."/>
+
+          }
+          <Input value={this.state.review}  onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences... (min. 20 char)"/>
+
           <Button onClick={this.addReview} className="mb-3" color="primary" size="sm" block="block">Submit</Button>
           <h4>
             <b>{totalReview} Reviews</b>
@@ -158,9 +165,10 @@ class Info extends Component {
           }
         </Col>
 
-        <Col sm={4} className="col-book">
+
+        <Col sm={4}>
           <Sticky>
-            <ThumbnailBook/>
+            <ThumbnailBook photos={photos}/>
           </Sticky>
         </Col>
 
