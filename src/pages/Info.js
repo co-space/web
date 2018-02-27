@@ -5,9 +5,11 @@ import ThumbnailBook from "../medium/ThumbnailBook"
 import AmenitiesDetail from "../small/AmenitiesDetail"
 import Carousel from "../medium/Carousel"
 import Review from "../medium/Review"
+import '../medium/medium.css'
 import Tablemenus from "../small/TableMenus"
 import {isEmpty} from "lodash"
 import axios from "axios"
+import Sticky from 'react-sticky-el'
 
 class Info extends Component {
   constructor(props) {
@@ -105,11 +107,11 @@ class Info extends Component {
             <b>{selected.name}</b>
           </h2>
           <b className="text-secondary">{joinDate}</b><br/>
-          <span className="text-muted">{selected.address}</span>
+          <span className="text-muted">{selected.address}</span><hr/>
           <h4 className="mt-3">
             <b>Overview</b>
           </h4>
-          <p className="text-justify">{selected.overview}</p>
+          <p className="text-justify">{selected.overview}</p><hr/>
           <h4>
             <b>Amenities</b>
           </h4>
@@ -119,20 +121,22 @@ class Info extends Component {
                 return (<AmenitiesDetail key={index} amenity={amenity}/>)
               })
             }
-          </Row>
+          </Row><hr/>
           <h4>
             <b>Price List</b>
           </h4>
           <Tablemenus/>
-          <h4>
+          <h4><hr/>
             <b>Photos</b>
           </h4>
           {
             (photos.length > 0)
               ? (<Carousel photos={photos}/>)
               : (<div></div>)
+
           }
           <Input value={this.state.review}  onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences... (min. 20 char)"/>
+
           <Button onClick={this.addReview} className="mb-3" color="primary" size="sm" block="block">Submit</Button>
           <h4>
             <b>{totalReview} Reviews</b>
@@ -160,8 +164,12 @@ class Info extends Component {
             })
           }
         </Col>
+
+
         <Col sm={4}>
-          <ThumbnailBook photos={photos}/>
+          <Sticky>
+            <ThumbnailBook photos={photos}/>
+          </Sticky>
         </Col>
 
       </Row>

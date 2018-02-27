@@ -1,6 +1,8 @@
 import React from "react"
 // import PropTypes from "prop-types"
-import BookModal from "../medium/BookModal"
+import BookModal from "./BookModal"
+import '../medium/medium.css'
+import Sticky from 'react-sticky-el'
 
 import {
   Card,
@@ -10,9 +12,11 @@ import {
   CardTitle
 } from "reactstrap"
 
+
 const Thumbnail = ({photos}) => (
     <Card>
       <CardImg top="top" width="100%" src={photos[0]} alt="Card image cap"/>
+
       <CardBody>
         <CardTitle>Impact Hub</CardTitle>
         <div className="d-flex justify-content-between">

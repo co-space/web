@@ -32,3 +32,17 @@
   background: green;
   border-radius: 5px;
 }
+
+.modal-title{
+  text-align: center;
+}
+
+.card-book{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
+.col-book{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
