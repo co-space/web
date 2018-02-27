@@ -1,6 +1,7 @@
 import React from "react"
 // import PropTypes from "prop-types"
-import BookModal from "../medium/BookModal"
+import BookModal from "./BookModal"
+import '../medium/medium.css'
 
 import {
   Card,
@@ -11,7 +12,7 @@ import {
 } from "reactstrap"
 
 const Thumbnail = () => (
-    <Card>
+    <Card className="card-book">
       <CardImg top="top" width="100%" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt="Card image cap"/>
       <CardBody>
         <CardTitle>Impact Hub</CardTitle>
