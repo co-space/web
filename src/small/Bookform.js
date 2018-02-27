@@ -12,14 +12,6 @@ export default class Bookform extends React.Component {
       <FormGroup>
         <Input type="email" name="email" id="email-book" placeholder="email"/>
       </FormGroup>
-      <FormGroup>
-        <Label for="select-book">Select Room Type</Label>
-        <Input type="select" name="select-book" id="select-book">
-          <option>Hot Desk</option>
-          <option>Dedicated Desk</option>
-          <option>Private Office</option>
-        </Input>
-      </FormGroup>
 
       <FormGroup>
 

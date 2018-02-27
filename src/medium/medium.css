@@ -1,19 +1,48 @@
 .nav-info1{
   background: linear-gradient(to bottom right, #2ed573, #7bed9f);
   border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-info1:active{
+  background: green;
+  border-radius: 5px;
 }
 
 .nav-info2{
   background: #7bed9f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-info2:active{
+  background: green;
   border-radius: 5px;
 }
 
 .nav-info3{
   background: linear-gradient(to right, #7bed9f, #2ed573);
   border-radius: 5px;
+  cursor: pointer;
 }
 
-.table-menu{
-    background: linear-gradient(to top right, #7bed9f, #2ed573);
-    border-radius: 5px;
+.nav-info3:active{
+  background: green;
+  border-radius: 5px;
+}
+
+.modal-title{
+  text-align: center;
+}
+
+.card-book{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
+.col-book{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
 }
