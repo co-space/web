@@ -54,6 +54,7 @@ export default class Multiselect extends React.Component {
     const { crazy, disabled, stayOpen, value } = this.state;
 		// const options = crazy ? WHY_WOULD_YOU : FLAVOURS;
     const options = FLAVOURS
+    
     return (
       <Select
         multi
@@ -64,6 +65,7 @@ export default class Multiselect extends React.Component {
         className="multiselect"
         value={value}
         onChange={this.handleChange}
+        isLoading={false}
         placeholder="Select Your Amenities"
         options={options}
       />
