@@ -1,3 +1,5 @@
 .table-menu{
-  background: linear-gradient(to bottom left, #7bed9f, #2ed573);
+    background: linear-gradient(to bottom left, #7bed9f, #2ed573);
+    border-radius: 10px;
+    text-align: center;
 }

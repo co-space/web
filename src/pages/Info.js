@@ -5,7 +5,7 @@ import ThumbnailBook from "../medium/ThumbnailBook"
 import AmenitiesDetail from "../small/AmenitiesDetail"
 import Carousel from "../medium/Carousel"
 import Review from "../medium/Review"
-import InfoMenu from "../medium/InfoMenu"
+import Tablemenus from "../small/TableMenus"
 import {isEmpty} from "lodash"
 import axios from "axios"
 
@@ -118,7 +118,7 @@ class Info extends Component {
           <h4>
             <b>Price List</b>
           </h4>
-          <InfoMenu/>
+          <Tablemenus/>
           <h4>
             <b>Photos</b>
           </h4>
