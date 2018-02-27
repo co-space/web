@@ -8,6 +8,7 @@ import CTAButtons from "../medium/CTAButtons"
 import CTAAvatar from "../small/CTAAvatar"
 import NavButtons from "../medium/NavButtons"
 
+
 //
 const auth = {
   account: {
@@ -52,7 +53,7 @@ class SegmentCTAHeader extends Component {
   componentWillMount(){
     console.log(this.props.token);
     if(this.props.token){
-      
+
     }
   }
 
@@ -84,6 +85,7 @@ class SegmentCTAHeader extends Component {
            />
          </Col>*/}
        </Row>
+
     )
   }
 }
