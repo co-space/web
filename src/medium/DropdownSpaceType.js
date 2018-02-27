@@ -8,7 +8,7 @@ export default class DropdownSpaceType extends React.Component {
   }
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Selected: ${selectedOption.label}`);
+    console.log(`Selected: `, selectedOption);
   }
   render() {
     const { selectedOption } = this.state;
@@ -19,6 +19,7 @@ export default class DropdownSpaceType extends React.Component {
         className="Dropdown_SpaceType"
         name="form-field-name"
         value={value}
+        removeSelected={true}
         onChange={this.handleChange}
         placeholder="Space Type"
         options={[
