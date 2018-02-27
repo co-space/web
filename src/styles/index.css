@@ -45,6 +45,10 @@ a:visited, a:hover {
   width: 15%;
 }
 
+.multiselect {
+  margin-bottom: 20px;
+}
+
 .btn-review {
   margin-bottom: 10px;
 }
