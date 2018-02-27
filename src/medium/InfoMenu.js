@@ -23,7 +23,7 @@ export default class InfoMenu extends React.Component {
   }
   render() {
     return (
-      <div>
+
 
         <Nav tabs>
 
@@ -52,7 +52,6 @@ export default class InfoMenu extends React.Component {
             </NavLink>
           </NavItem>
 
-
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
             <Row>
@@ -79,7 +78,7 @@ export default class InfoMenu extends React.Component {
         </Nav>
 
 
-      </div>
+
 
     );
   }
