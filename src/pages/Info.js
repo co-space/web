@@ -9,6 +9,7 @@ import '../medium/medium.css'
 import Tablemenus from "../small/TableMenus"
 import {isEmpty} from "lodash"
 import axios from "axios"
+import Sticky from 'react-sticky-el'
 
 class Info extends Component {
   constructor(props) {
@@ -156,8 +157,11 @@ class Info extends Component {
             })
           }
         </Col>
+
         <Col sm={4} className="col-book">
-          <ThumbnailBook/>
+          <Sticky>
+            <ThumbnailBook/>
+          </Sticky>
         </Col>
 
       </Row>

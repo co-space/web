@@ -2,6 +2,7 @@ import React from "react"
 // import PropTypes from "prop-types"
 import BookModal from "./BookModal"
 import '../medium/medium.css'
+import Sticky from 'react-sticky-el'
 
 import {
   Card,
