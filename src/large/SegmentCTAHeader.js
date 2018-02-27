@@ -65,6 +65,7 @@ class SegmentCTAHeader extends Component {
            />
          </Col>*/}
        </Row>
+
     )
   }
 }

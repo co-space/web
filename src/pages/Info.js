@@ -94,7 +94,7 @@ class Info extends Component {
       ]
       var joinDate = `Joined ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
       var amenities = selected.amenities[0].split(',')
-      var photos = selected.photos
+      var photos = selected.photos[0].split(',')
       var reviews = selected.reviews
       var totalReview = reviews.length
       console.log(amenities);
