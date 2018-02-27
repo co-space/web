@@ -25,9 +25,6 @@ class AuthRegisterForm extends Component {
       [param]: value
     })
 
-    // if (param === "email") {
-    //   this.isExist(param, value)
-    // }
   }
 
   signUp(){
@@ -36,7 +33,7 @@ class AuthRegisterForm extends Component {
     var password = this.state.password
 
     axios.post(`${process.env.REACT_APP_API_URL}/accounts/register`, {
-      username: name,
+      name: name,
       email: email,
       password: password
     }).then(function(response) {

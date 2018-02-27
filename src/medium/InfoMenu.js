@@ -24,9 +24,7 @@ export default class InfoMenu extends React.Component {
   render() {
     return (
       <div>
-
         <Nav tabs>
-
           <NavItem className="nav-info1">
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
