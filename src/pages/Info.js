@@ -93,10 +93,11 @@ class Info extends Component {
         "December"
       ]
       var joinDate = `Joined ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
-      var amenities = selected.amenities
+      var amenities = selected.amenities[0].split(',')
       var photos = selected.photos
       var reviews = selected.reviews
       var totalReview = reviews.length
+      console.log(amenities);
     }
     // console.log(this.props.active_user);
 

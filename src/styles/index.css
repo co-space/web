@@ -383,3 +383,7 @@ footer {
 .carousel-size{
   max-height: 200px;
 }
+
+.max-height-200{
+  max-height: 200px;
+}
