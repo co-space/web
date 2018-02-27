@@ -4,7 +4,6 @@ import {Row, Col, Input, Button, Label} from "reactstrap"
 import ReactFilestack, {client} from 'filestack-react';
 import axios from "axios"
 import {Redirect} from "react-router-dom"
-import ReactFilestack, { client } from 'filestack-react';
 import Multiselect from '../large/Multiselect'
 
 //API_KEY filestack
@@ -67,19 +66,15 @@ class SegmentNewPost extends Component {
         photo: photo
       }).then(function(response) {
         if(response.data){
-          // console.log(response.data.data.id);
             self.setState({
               cospace_id: response.data.data.id,
               redirect: true
             })
-
         }
       }).catch(error => {
         console.log(error.response)
       });
-      // this.setState({name: '', email: '', password: ''})
     }
-
   }
 
   render() {

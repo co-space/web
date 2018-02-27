@@ -4,9 +4,9 @@ import 'react-select/dist/react-select.css';
 
 
 const AMENITIES = [
-	{ label: 'High Speed Wifi 🤘🏻', value: 'highspeedwifi' },
-	{ label: 'Lounge 🤘🏻', value: 'Lounge' },
-	{ label: 'Free Coffee/Tea 🤘🏻', value: 'freecoffetea' },
+	{ label: 'High Speed Wifi', value: 'highspeedwifi' },
+	{ label: 'Lounge ', value: 'Lounge' },
+	{ label: 'Free Coffee/Tea ', value: 'freecoffetea' },
 	{ label: 'Kitchen', value: 'kitchen' },
 	{ label: 'Standing Desk', value: 'standingdesk' },
 	{ label: 'Pool Table', value: 'pooltable' },
@@ -20,10 +20,10 @@ const AMENITIES = [
 	{ label: 'Computers (Macs)', value: 'macs' },
 	{ label: 'On-site Cafe/Restaurant', value: 'restaurant' },
 	{ label: 'Comfortable Chair', value: 'chair' },
-	{ label: 'Childcare 👶🏻', value: 'childcare' },
+	{ label: 'Childcare ', value: 'childcare' },
 	{ label: 'Beanbags', value: 'beanbags' },
   { label: 'Outdoor Teracce', value: 'outdoorteracce' },
-  { label: 'Ping Pong Table 🏓', value: 'pingpong' },
+  { label: 'Ping Pong Table ', value: 'pingpong' },
   { label: 'Printer', value: 'printer' },
   { label: 'Scanner', value: 'scanner' },
   { label: '24hr member access', value: '24hr' },
