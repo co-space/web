@@ -25,7 +25,7 @@ const Thumbnail = ({photos, name}) => (
       <CardImg top="top" width="100%" src={photos[0]} alt="Card image cap"/>
 
       <CardBody>
-        <CardTitle>Impact Hub</CardTitle>
+        <CardTitle>{name}</CardTitle>
         <div className="d-flex justify-content-between">
         <CardText className="my-auto"><img className="rating-star" src={`${process.env.REACT_APP_API_URL}/images/icons/star.png`} alt="rate-star"/><span className="rating-point">&nbsp;4.5</span></CardText>
         <BookModal/>

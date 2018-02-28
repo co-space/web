@@ -13,85 +13,85 @@ const API_KEY = "Avsgm8lbeTA2U9LnX68j5z"
 const AMENITIES = [
   {
     label: 'High Speed Wifi',
-    value: 'highspeedwifi'
+    value: 'High Speed Wifi'
   }, {
     label: 'Lounge ',
     value: 'Lounge'
   }, {
     label: 'Free Coffee/Tea ',
-    value: 'freecoffetea'
+    value: 'Free Coffee/Tea '
   }, {
     label: 'Kitchen',
     value: 'kitchen'
   }, {
     label: 'Standing Desk',
-    value: 'standingdesk'
+    value: 'Standing Desk'
   }, {
     label: 'Pool Table',
-    value: 'pooltable'
+    value: 'Pool Table'
   }, {
     label: 'Skype Room',
-    value: 'skyperoom'
+    value: 'Skype Room'
   }, {
     label: 'Projector',
-    value: 'projector'
+    value: 'Projector'
   }, {
     label: 'Screen',
-    value: 'screen'
+    value: 'Screen'
   }, {
     label: 'Large Monitor',
-    value: 'largemonitor'
+    value: 'Large Monitor'
   }, {
     label: 'Speakers',
-    value: 'speakers'
+    value: 'Speakers'
   }, {
     label: 'Personal Table',
-    value: 'personaltable'
+    value: 'Personal Table'
   }, {
     label: 'Computers (PCs)',
-    value: 'pcs'
+    value: 'Computers (PCs)'
   }, {
     label: 'Computers (Macs)',
-    value: 'macs'
+    value: 'Computers (Macs)'
   }, {
     label: 'On-site Cafe/Restaurant',
-    value: 'restaurant'
+    value: 'On-site Cafe/Restaurant'
   }, {
     label: 'Comfortable Chair',
-    value: 'chair'
+    value: 'Comfortable Chair'
   }, {
     label: 'Childcare ',
-    value: 'childcare'
+    value: 'Childcare'
   }, {
     label: 'Beanbags',
-    value: 'beanbags'
+    value: 'Beanbags'
   }, {
     label: 'Outdoor Teracce',
-    value: 'outdoorteracce'
+    value: 'Outdoor Teracce'
   }, {
     label: 'Ping Pong Table ',
-    value: 'pingpong'
+    value: 'Ping Pong Table'
   }, {
     label: 'Printer',
-    value: 'printer'
+    value: 'Printer'
   }, {
     label: 'Scanner',
-    value: 'scanner'
+    value: 'Scanner'
   }, {
     label: '24hr member access',
-    value: '24hr'
+    value: '24hr member access'
   }, {
     label: 'Dual/Single Monitor',
-    value: 'dualsinglemonitor'
+    value: 'Dual/Single Monitor'
   }, {
     label: 'Free parking',
-    value: 'freeparking'
+    value: 'Free parking'
   }, {
     label: 'Events and / or workshops',
-    value: 'eventsandworkshops'
+    value: 'Events and / or workshops'
   }, {
     label: 'Whiteboard and Fresh Markers',
-    value: 'whiteboardmarkers'
+    value: 'Whiteboard and Fresh Markers'
   }
 ];
 
