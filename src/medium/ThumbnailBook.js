@@ -11,7 +11,7 @@ import axios from "axios"
 
 import {
   Card,
-  CardImg,s
+  CardImg,
   CardText,
   CardBody,
   CardTitle
