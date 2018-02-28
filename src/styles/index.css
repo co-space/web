@@ -502,3 +502,12 @@ footer {
   }
 
 }
+
+
+.booking-thumbnail-img{
+  max-height: 280px;
+}
+
+.home-thumbnail-img{
+  max-height: 180px;
+}
