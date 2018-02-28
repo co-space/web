@@ -26,6 +26,13 @@ export const GET_USER_COSPACE_LIST = `GET_USER_COSPACE_LIST`
 export const SET_TOKEN = `SET_TOKEN`
 export const SET_ACTIVE_USER = `SET_ACTIVE_USER`
 
+
+export const SET_FILTER_KEY = `SET_FILTER_KEY`
+
+export const SET_FILTER_CITY = `SET_FILTER_CITY`
+export const SET_FILTER_MOST_REVIEW = `SET_FILTER_MOST_REVIEW`
+
+
 // export const ADD_REVIEW = `ADD_REVIEW`
 
 

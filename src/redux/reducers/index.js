@@ -9,6 +9,8 @@ import topics from "./topics"
 import spaces from "./spaces"
 import accounts from "./accounts"
 import auth from "./auth"
+import filter from "./filter"
+
 
 
 
@@ -18,7 +20,8 @@ const rootReducer = combineReducers({
   topics,
   spaces,
   accounts,
-  auth
+  auth,
+  filter
 })
 
 export default rootReducer

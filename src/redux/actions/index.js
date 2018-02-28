@@ -21,8 +21,11 @@ import {
   GET_USER_REVIEW_HISTORY,
   GET_USER_COSPACE_LIST,
   SET_TOKEN,
-  SET_ACTIVE_USER
-    // LOADING_TRUE,
+  SET_ACTIVE_USER,
+  SET_FILTER_KEY,
+  SET_FILTER_CITY,
+  SET_FILTER_MOST_REVIEW
+  // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
 } from "./types"
@@ -246,4 +249,18 @@ export const setActiveUser = (payload) => ({
 
 export const getActiveUser = payload => dispatch => {
   return dispatch(setActiveUser(payload))
+}
+
+// SET FILTER PARMATR -----------------------------------------------------------------------------
+
+export const filterCity = (city) => ({
+  type: SET_FILTER_CITY,
+  payload: {
+    city: city
+  }
+})
+
+export const setFilterCity = (city) => dispatch => {
+  // console.log(city);
+  return dispatch(filterCity(city))
 }

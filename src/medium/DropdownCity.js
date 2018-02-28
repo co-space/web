@@ -1,14 +1,20 @@
 import React from "react"
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-
+import {has} from "lodash"
 export default class DropdownCity extends React.Component {
   state = {
     selectedOption: '',
   }
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Selected: `, selectedOption);
+    // console.log(`Selected: `, selectedOption);
+    // var city = ""
+    if(has(selectedOption, "value")){
+      this.props.setFilterCity(selectedOption.value)
+    } else {
+      this.props.setFilterCity(null)
+    }
   }
   render() {
     const { selectedOption } = this.state;
@@ -24,11 +30,11 @@ export default class DropdownCity extends React.Component {
         placeholder="Select your city"
         options={[
           { value: 'Jakarta', label: 'Jakarta' },
-          { value: 'JakSel', label: 'Jakarta Selatan' },
-          { value: 'JakBar', label: 'Jakarta Barat' },
-          { value: 'JakUt', label: 'Jakarta Utara' },
-          { value: 'JakTim', label: 'Jakarta Timur' },
-          { value: 'JakPus', label: 'Jakarta Pusat' },
+          { value: 'Jakarta Selatan', label: 'Jakarta Selatan' },
+          { value: 'Jakarta Barat', label: 'Jakarta Barat' },
+          { value: 'Jakarta Utara', label: 'Jakarta Utara' },
+          { value: 'Jakarta Timur', label: 'Jakarta Timur' },
+          { value: 'Jakarta Pusat', label: 'Jakarta Pusat' },
           { value: 'Bandung', label: 'Bandung' },
           { value: 'Semarang', label: 'Semarang' },
           { value: 'Bogor', label: 'Bogor' },
