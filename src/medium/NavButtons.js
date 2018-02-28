@@ -8,7 +8,7 @@ const NavButtons = (props) => (
       <Button outline  color="primary" className="cta fade-in-top">Sign in</Button>
     </Link>
     <Link to="/register">
-      <Button outline color="primary" className="cta bounce-in-top">Sign Up</Button>
+      <Button outline color="primary" className="cta fade-in-top">Sign Up</Button>
     </Link>
   </span>
 )
