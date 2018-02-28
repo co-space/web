@@ -5,7 +5,7 @@ import { Button } from 'reactstrap'
 const ButtonReviews = (props) => (
   <div className="btn-review">
     <Link to="/co">
-      <Button outline  color="info">Most Reviews</Button>
+      <Button outline  color="info">Top Rated</Button>
     </Link>
   </div>
 )
