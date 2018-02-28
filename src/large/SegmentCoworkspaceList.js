@@ -44,7 +44,7 @@ class SegmentCoworkspaceList extends Component {
       <Row >
         {lists.map((list, index) => {
           return (
-            <HomeThumbnail key={index} name={list.name} photo={list.photos[0].split(',')[0]} id={list.id} />
+            <HomeThumbnail  key={index} name={list.name} photo={list.photos[0].split(',')[0]} id={list.id} />
           )
         })}
       </Row>
