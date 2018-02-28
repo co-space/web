@@ -11,7 +11,7 @@ import {
 } from "reactstrap"
 
 const Thumbnail = ({name, photo, id}) => (<Card>
-  <CardImg top={true} width="100%" src={photo} alt="Card image cap"/>
+  <CardImg className="home-thumbnail-img" top={true} width="100%" src={photo} alt="Card image cap "/>
   <CardBody>
     <CardTitle>{name}
     </CardTitle>

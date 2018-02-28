@@ -14,7 +14,7 @@ import {
 
 const Thumbnail = () => (
     <Card>
-      <CardImg top="top" width="100%" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt="Card image cap"/>
+      <CardImg className="max-height-200" top="top" width="100%" src={`${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`} alt="Card image cap"/>
       <CardBody>
         <CardTitle>Impact Hub</CardTitle>
         <div className="d-flex justify-content-between">

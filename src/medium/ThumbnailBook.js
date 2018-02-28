@@ -1,4 +1,4 @@
-import React from "react"
+  import React from "react"
 // import PropTypes from "prop-types"
 import BookModal from "./BookModal"
 import './medium.css'
@@ -11,7 +11,7 @@ import axios from "axios"
 
 import {
   Card,
-  CardImg,
+  CardImg,s
   CardText,
   CardBody,
   CardTitle

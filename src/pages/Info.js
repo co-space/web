@@ -93,10 +93,11 @@ class Info extends Component {
         "December"
       ]
       var joinDate = `Joined ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
-      var amenities = selected.amenities
-      var photos = selected.photos
+      var amenities = selected.amenities[0].split(',')
+      var photos = selected.photos[0].split(',')
       var reviews = selected.reviews
       var totalReview = reviews.length
+      console.log(amenities);
     }
     // console.log(this.props.active_user);
 
@@ -168,7 +169,7 @@ class Info extends Component {
 
         <Col sm={4}>
           <Sticky>
-            <ThumbnailBook photos={photos}/>
+            <ThumbnailBook name={selected.name} photos={photos}/>
           </Sticky>
         </Col>
 

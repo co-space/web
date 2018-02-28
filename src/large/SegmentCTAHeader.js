@@ -9,10 +9,6 @@ import CTAAvatar from "../small/CTAAvatar"
 import NavButtons from "../medium/NavButtons"
 import {isEmpty} from "lodash"
 
-
-
-//
-
 const auth = {
   account: {
     name: "M Haidar Hanif",
