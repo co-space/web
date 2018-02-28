@@ -10,7 +10,7 @@ import ButtonTopRated from '../medium/ButtonTopRated'
 
 const DropdownGroup = ({ className }) => (
   <Row  className="cta">
-    <Col sm={11}  className="d-flex justify-content-between">
+    <Col sm={11}  className="d-flex justify-content-between fade-in-top">
       <h6>Filter Space</h6>
       <DropdownCity />
       <ButtonReviews />
