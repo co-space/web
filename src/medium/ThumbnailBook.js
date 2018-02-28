@@ -4,7 +4,6 @@ import BookModal from "./BookModal"
 import './medium.css'
 import FbShare from '../small/FbShare'
 import TwitterShare from '../small/TwitterShare'
-import Sticky from 'react-sticky-el'
 import {Row, Col} from 'reactstrap'
 import {isEmpty} from "lodash"
 import axios from "axios"

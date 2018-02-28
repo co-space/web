@@ -10,7 +10,7 @@ import {
   Button
 } from "reactstrap"
 
-const Thumbnail = ({name, photo, id, total_reviews}) => (<Card>
+const Thumbnail = ({name, photo, id, total_reviews}) => (<Card className="fade-in-top">
   <CardImg className="home-thumbnail-img" top={true} width="100%" src={photo} alt="Card image cap "/>
   <CardBody>
     <CardTitle>{name}
