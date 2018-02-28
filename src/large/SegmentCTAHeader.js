@@ -39,7 +39,7 @@ class SegmentCTAHeader extends Component {
       var photo = active_user.profile_picture
     }
     return(
-      <Row id="SegmentCTAHeader" className="">
+      <Row id="SegmentCTAHeader" className="fade-in-top">
          <Col sm={2}>
            <Logo />
          </Col>
