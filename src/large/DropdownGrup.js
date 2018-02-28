@@ -14,8 +14,6 @@ const DropdownGroup = ({ className }) => (
     <Col sm={12}  className="d-flex justify-content-between">
       <h6>Filter Space</h6>
       <DropdownCity />
-      <DropdownMember />
-      <DropdownSpaceType />
       <ButtonReviews />
     </Col>
     {/* <Col sm={3} className="column right" >

@@ -37,7 +37,7 @@ class Info extends Component {
     this.fetchOne()
   }
 
-  fetchOne(){
+  fetchOne() {
     this.fetchOneSpace(this.id)
   }
 
@@ -48,7 +48,7 @@ class Info extends Component {
     var token = this.props.token
     var fetchOne = this.fetchOne
 
-    if(review.length > 20){
+    if (review.length > 20) {
       axios.post(`${process.env.REACT_APP_API_URL}/coworking_spaces/add_review/${this.id}`, {
         review: review,
         token: token
@@ -60,7 +60,6 @@ class Info extends Component {
       });
       this.setState({review: ''})
     }
-
 
   }
 
@@ -76,6 +75,8 @@ class Info extends Component {
     var photos = []
     var reviews = []
     var totalReview = 0
+    var price = {}
+
     if (!isEmpty(selected)) {
       var date = new Date(selected.createdAt)
       var month = [
@@ -97,7 +98,12 @@ class Info extends Component {
       var photos = selected.photos[0].split(',')
       var reviews = selected.reviews
       var totalReview = reviews.length
-      console.log(amenities);
+      var price = {
+        daily: selected.price.daily,
+        weekly: selected.price.weekly,
+        monthly: selected.price.monthly
+      }
+      console.log(price);
     }
     // console.log(this.props.active_user);
 
@@ -126,7 +132,7 @@ class Info extends Component {
           <h4>
             <b>Price List</b>
           </h4>
-          <Tablemenus/>
+          <Tablemenus price={price}/>
           <h4><hr/>
             <b>Photos</b>
           </h4>
@@ -136,11 +142,12 @@ class Info extends Component {
               : (<div></div>)
 
           }
-          <Input value={this.state.review}  onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences... (min. 20 char)"/>
+          <Input value={this.state.review} onChange={this.handleChange} className="mb-1" type="textarea" name="review" id="review" placeholder="Share your experiences... (min. 20 char)"/>
 
           <Button onClick={this.addReview} className="mb-3" color="primary" size="sm" block="block">Submit</Button>
           <h4>
-            <b>{totalReview} Reviews</b>
+            <b>{totalReview}&nbsp;
+              Reviews</b>
           </h4>
           {
             reviews.map((review, index) => {
@@ -165,7 +172,6 @@ class Info extends Component {
             })
           }
         </Col>
-
 
         <Col sm={4}>
           <Sticky>
