@@ -36,12 +36,13 @@ class SegmentCospaceList extends Component{
           </h4>
           <Row>
           {selected_cospace_list.map((selected_cospace, index) => {
+            var photo = selected_cospace.photos[0].split(',')[0]
             return (
               <ThumbnailCospaceList
               key={index}
               name={selected_cospace.name}
               city={selected_cospace.location.city}
-              photo={selected_cospace.photos[0]}
+              photo={photo}
               id={selected_cospace.id}
               />
             )
