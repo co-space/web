@@ -112,11 +112,13 @@ class SegmentNewPost extends Component {
       redirect: false,
       cospace_id: 1,
       value: [],
-      disabled: false
+      disabled: false,
+      selectedOption: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDropdown = this.handleDropdown.bind(this);
 
   }
 
@@ -136,6 +138,11 @@ class SegmentNewPost extends Component {
     }
   }
 
+  handleDropdown = (selectedOption) => {
+    this.setState({ selectedOption });
+    // console.log(`Selected: `, selectedOption);
+  }
+
   handleSubmit() {
     var name = this.state.name
     var address = this.state.address
@@ -144,6 +151,11 @@ class SegmentNewPost extends Component {
     var token = this.props.token
     var value = this.state.value.split(',')
     var state = this.state
+    var city = this.state.selectedOption.value
+    var daily_price = this.state.daily_price
+    var weekly_price = this.state.weekly_price
+    var monthly_price = this.state.monthly_price
+
     var self = this
     // console.log(value);
     if (token) {
@@ -153,8 +165,15 @@ class SegmentNewPost extends Component {
         overview: overview,
         token: token,
         photo: photo,
-        amenities: value
+        amenities: value,
+        city: city,
+        price: {
+          daily: daily_price,
+          weekly: weekly_price,
+          monthly: monthly_price
+        }
       }).then(function(response) {
+        console.log(response);
         if (response.data) {
           self.setState({cospace_id: response.data.data.id, redirect: true})
         }
@@ -170,8 +189,9 @@ class SegmentNewPost extends Component {
   }
 
   render() {
-    const {crazy, disabled, stayOpen, value} = this.state;
+    const {crazy, disabled, stayOpen, value,selectedOption} = this.state;
     const options = AMENITIES
+    const dropdownValue = selectedOption && selectedOption.value;
 
     if (this.state.redirect) {
       return <Redirect to={`/co/${this.state.cospace_id}`}/>;
@@ -196,13 +216,40 @@ class SegmentNewPost extends Component {
             <strong>Upload Image</strong>&nbsp;&nbsp;&nbsp;&nbsp;
             <Button outline="outline" color="info" size="sm" onClick={onPick}>Upload</Button>&nbsp;<span>&nbsp;{this.state.file_uploaded}</span>
           </div>)}/>
-        <Row>
+          <strong>Membership Price</strong>
+        <Row className="mt-2">
           <Col sm={4}><Input value={this.state.daily_pripce} onChange={this.handleChange} className="mb-3" type="text" name="daily_price" id="daily_price" placeholder="Daily ..." rows={6}/></Col>
           <Col sm={4}><Input value={this.state.weekly_price} onChange={this.handleChange} className="mb-3" type="text" name="weekly_price" id="weekly_price" placeholder="Weekly ..." rows={6}/></Col>
           <Col sm={4}><Input value={this.state.monthly_price} onChange={this.handleChange} className="mb-3" type="text" name="monthly_price" id="monthly_price" placeholder="Monthly ..." rows={6}/></Col>
         </Row>
-        <Input value={this.state.city} onChange={this.handleChange} className="mb-3" type="text" name="city" id="city" placeholder="City ..." rows={6}/>
-        <Input value={this.state.province} onChange={this.handleChange} className="mb-3" type="text" name="province" id="province" placeholder="Province ..." rows={6}/>
+        <Select
+          className="Dropdown_City mb-3"
+          name="form-field-name"
+          value={dropdownValue}
+          removeSelected={true}
+          onChange={this.handleDropdown}
+          placeholder="Select your city"
+          options={[
+            { value: 'Jakarta', label: 'Jakarta' },
+            { value: 'Jakarta Selatan', label: 'Jakarta Selatan' },
+            { value: 'Jakarta Barat', label: 'Jakarta Barat' },
+            { value: 'Jakarta Utara', label: 'Jakarta Utara' },
+            { value: 'Jakarta Timur', label: 'Jakarta Timur' },
+            { value: 'Jakarta Pusat', label: 'Jakarta Pusat' },
+            { value: 'Bandung', label: 'Bandung' },
+            { value: 'Semarang', label: 'Semarang' },
+            { value: 'Bogor', label: 'Bogor' },
+            { value: 'Surabaya', label: 'Surabaya' },
+            { value: 'Tangerang', label: 'Tangerang' },
+            { value: 'Medan', label: 'Medan' },
+            { value: 'Makassar', label: 'Makassar' },
+            { value: 'Solo', label: 'Solo' },
+            { value: 'Banjarmasin', label: 'Banjarmasin' },
+            { value: 'Batam', label: 'Batam' },
+            { value: 'Lampung', label: 'Lampung' },
+            { value: 'Malang', label: 'Malang' },
+          ]}
+        />
         <Button color="primary" size="sm" block="block" onClick={this.handleSubmit}>Submit</Button>
       </Col>
     </Row>)

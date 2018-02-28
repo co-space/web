@@ -3,39 +3,36 @@ import { Table } from 'reactstrap';
 import './small.css'
 
 export default class TableMenus extends React.Component {
+  constructor(props){
+    super(props)
+  }
   render() {
     return (
       <Table bordered hover className="table-menu">
         <thead>
           <tr>
             <th>People</th>
-            <th>Duration</th>
+            <th>Membership Type</th>
             <th>Price</th>
-            <th>Access Hours</th>
-            <th>Availability</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>1 hour</td>
-            <td>{/* this.state for price */}</td>
-            <td>Reception Hours</td>
-            <td>enquire</td>
+            <td>Daily</td>
+            <td>{this.props.price.daily}</td>
+
           </tr>
           <tr>
             <th scope="row">1</th>
-            <td>1 day</td>
-            <td>{/* this.state for price */}</td>
-            <td>Receptionist Hours</td>
-            <td>available</td>
+            <td>Weekly</td>
+            <td>{this.props.price.weekly}</td>
           </tr>
           <tr>
             <th scope="row">1</th>
-            <td>1 month</td>
-            <td>{/* this.state for price */}</td>
-            <td>Receptionist Hours</td>
-            <td>Available</td>
+            <td>Monthly</td>
+            <td>{this.props.price.monthly}</td>
+
           </tr>
         </tbody>
       </Table>
