@@ -6,6 +6,8 @@ import FbShare from '../small/FbShare'
 import TwitterShare from '../small/TwitterShare'
 import Sticky from 'react-sticky-el'
 import {Row, Col} from 'reactstrap'
+import {isEmpty} from "lodash"
+import axios from "axios"
 
 import {
   Card,
@@ -16,7 +18,9 @@ import {
 } from "reactstrap"
 
 
-const Thumbnail = ({photos}) => (
+const Thumbnail = ({photos, name}) => (
+
+
     <Card>
       <CardImg top="top" width="100%" src={photos[0]} alt="Card image cap"/>
 
