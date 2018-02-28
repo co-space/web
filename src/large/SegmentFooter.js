@@ -11,11 +11,11 @@ import {Link} from "react-router-dom"
 // ]
 
 const SegmentFooter = props => {
-  return (<div className="mb-4 text-center"><hr/>
-    <a href="" className="mx-4 footer-menu">Search Spaces</a>|
-    <a href="" className="mx-4 footer-menu">Most Reviewed Spaces</a>|
-    <Link to="/new"><a href="" className="mx-4 footer-menu">Add Your Spaces</a></Link>|
-    <a href="" className="mx-4 footer-menu">Events</a>
+  return (<div className="mb-4 text-center tracking-in-expand-fwd"><hr/>
+    <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Search Spaces</a>|
+    <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Most Reviewed Spaces</a>|
+    <Link to="/new"><a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Add Your Spaces</a></Link>|
+    <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Events</a>
     <div className="mt-3">
       <img className="mx-3" src={`${process.env.REACT_APP_API_URL}/images/icons/fb-icon.png`} alt="facebook-icon"/>
       <img className="mx-3" src={`${process.env.REACT_APP_API_URL}/images/icons/twit-icon.png`} alt="twitter-icon"/>
