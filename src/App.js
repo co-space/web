@@ -14,6 +14,7 @@ import New from "./pages/New"
 import Profile from "./pages/Profile"
 import Settings from "./pages/Settings"
 import Details from "./pages/Details"
+import Stack from "./pages/Stack"
 
 import Info from "./pages/Info"
 import ConnectedInfo from "./redux/containers/ConnectedInfo"
@@ -37,6 +38,7 @@ const App = props => {
       <Route path={`/profile/:id`} component={Profile} />
       <Route path={`/settings`} component={Settings} />
       <Route path={`/details`} component={Details} />
+      <Route path={`/tech`} component={Stack} />
     </div>
   )
 }

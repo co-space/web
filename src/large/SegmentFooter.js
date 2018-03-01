@@ -15,7 +15,9 @@ import Ionicon from 'react-ionicons'
 const SegmentFooter = props => {
   return (<div className="mb-4 text-center tracking-in-expand-fwd"><hr/>
     <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Search Spaces</a>|
-    <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Most Reviewed Spaces</a>|
+    <Link to="/tech">
+    <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Tech Stack</a>|
+    </Link>
     <Link to="/new"><a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Add Your Spaces</a></Link>
     {/* <a href="" className="mx-4 footer-menu tracking-in-expand-fwd">Tech Stack</a> */}
     <div className="mt-3">
