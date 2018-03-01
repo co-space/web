@@ -4,7 +4,6 @@ import {Form, FormGroup, Label, Input} from "reactstrap"
 import ActionButton from "../small/ActionButton"
 import axios from 'axios';
 import swal from 'sweetalert';
-import {Redirect} from 'react-router-dom'
 
 
 
@@ -41,11 +40,19 @@ class AuthRegisterForm extends Component {
       password: password
     }).then(function(response) {
       console.log('saved successfully')
-      swal("Good job!", "Register Success", "success");
-      return (<Redirect to="/login"/>)
+      swal({
+        title: "Good job!",
+        text: "Register Success",
+        icon: "success",
+        button: "Sign In"
+      }).then(okay=> {
+        if (okay) {
+          window.location.href = 'http://localhost:3001/login'
+        }
+      })
     }).catch(error => {
       console.log(error.response)
-      swal("Try Again !", "error");
+      swal("Try Again !", "Error");
     });
     this.setState({name: '', email: '', password: ''})
 
