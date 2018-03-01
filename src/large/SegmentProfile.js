@@ -53,6 +53,9 @@ class SegmentProfile extends Component {
             <ListGroupItem>Cospace</ListGroupItem>
           </Link>
         </ListGroup>
+        <ListGroup>
+            <ListGroupItem>Test</ListGroupItem>
+        </ListGroup>
       </Col>
       <Col sm={9}>
         <h1>Welcome, {name}</h1>
