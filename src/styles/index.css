@@ -272,9 +272,6 @@ a:visited, a:hover {
 /* -------------------------------------------------------------------------- */
 
 .action.button {
-  background: navy;
-  color: #fff;
-  border: none;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
