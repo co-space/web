@@ -9,6 +9,8 @@ import CTAAvatar from "../small/CTAAvatar"
 import NavButtons from "../medium/NavButtons"
 import {isEmpty} from "lodash"
 
+
+
 const auth = {
   account: {
     name: "M Haidar Hanif",
@@ -50,7 +52,9 @@ class SegmentCTAHeader extends Component {
          {(this.props.token) ? (<CTAAvatar
            to={`/profile/${id}`}
            photo={photo}
-         />) : (<NavButtons />)}
+         />
+
+       ) : (<NavButtons />)}
 
            {/*<CTAAvatar
              to={`/profile/${auth.account.username}`}
