@@ -36,9 +36,6 @@ const CarouselImg = () => (
          <div>
            <img src={`${process.env.REACT_APP_API_URL}/images/carousel/caro7.jpg`} alt="Caroosel 1"/>
          </div>
-         <div>
-           <img src="http://placekitten.com/g/400/200" alt="Caroosel 1"/>
-         </div>
   </Slider>
 )
 
