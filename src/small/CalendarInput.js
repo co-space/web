@@ -2,7 +2,6 @@ import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import { Input, Form } from 'reactstrap';
 import 'react-day-picker/lib/style.css';
-import './small.css'
 export default class CalendarInput extends React.Component {
   constructor(props) {
     super(props);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'reactstrap';
-import './small.css'
+
 
 export default class TableMenus extends React.Component {
   constructor(props){
@@ -8,7 +8,7 @@ export default class TableMenus extends React.Component {
   }
   render() {
     return (
-      <Table bordered hover className="table-menu">
+      <Table bordered hover className="scale-up-center">
         <thead>
           <tr>
             <th>People</th>

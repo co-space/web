@@ -3,6 +3,8 @@ import {Form, FormGroup, Label, Input} from "reactstrap"
 import axios from "axios"
 import ActionButton from "../small/ActionButton"
 import {Redirect} from 'react-router-dom'
+import swal from 'sweetalert';
+
 
 
 // const AuthLoginForm = ({ submitLoginData }) => (
@@ -69,9 +71,16 @@ class AuthLoginForm extends Component {
       if (response.data.token) {
         setToken(response.data.token)
         getActiveUser(response.data)
+
         return (<Redirect to="/dashboard"/>)
       } else {
         console.log("username / password wrong");
+        swal({
+          title: "Try Again!",
+          text: "Wrong username / password",
+          icon: "error",
+          button: "Try"
+        })
       }
     }).catch(function(error) {
       console.log(error);

@@ -4,7 +4,6 @@ import BookModal from "./BookModal"
 import './medium.css'
 import FbShare from '../small/FbShare'
 import TwitterShare from '../small/TwitterShare'
-import Sticky from 'react-sticky-el'
 import {Row, Col} from 'reactstrap'
 import {isEmpty} from "lodash"
 import axios from "axios"
@@ -21,7 +20,7 @@ import {
 const Thumbnail = ({photos, name}) => (
 
 
-    <Card>
+    <Card className="swing-in-top-fwd">
       <CardImg top="top" width="100%" src={photos[0]} alt="Card image cap"/>
 
       <CardBody>
