@@ -39,7 +39,7 @@
   "scripts": {
     "dev": "PORT=3001 react-app-rewired start",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired build && echo '/*    /index.html   200' > build/_redirects",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "git push origin master"
