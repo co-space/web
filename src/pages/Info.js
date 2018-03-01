@@ -175,7 +175,7 @@ class Info extends Component {
 
         <Col sm={4}>
           <Sticky>
-            <ThumbnailBook name={selected.name} photos={photos}/>
+            <ThumbnailBook name={selected.name} photos={photos} />
           </Sticky>
         </Col>
 

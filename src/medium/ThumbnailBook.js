@@ -20,7 +20,7 @@ import {
 const Thumbnail = ({photos, name}) => (
 
 
-    <Card>
+    <Card className="swing-in-top-fwd">
       <CardImg top="top" width="100%" src={photos[0]} alt="Card image cap"/>
 
       <CardBody>
