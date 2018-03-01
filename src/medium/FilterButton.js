@@ -33,31 +33,13 @@ class ButtonReviews extends Component {
   handleClick() {
     var city = this.props.city
     var most_review = this.props.most_review
-    console.log(this.state.toggle);
 
-    this.setState({
-      filter_most_reviewed: !this.state.filter_most_reviewed,
-      toggle: !this.state.toggle
-    })
-    console.log(this.state.toggle);
-    if(this.state.toggle){
-      this.setState({
-        className: "buttonClicked"
-      })
-    }else {
-      this.setState({
-        className: ""
-      })
-    }
-
-    this.props.setFilterMostReview(this.state.filter_most_reviewed)
-    // console.log(this.props.most_review);
-    // this.props.fetchFilteredList({city: city, most_reviewed: most_review})
+    this.props.fetchFilteredList({city: city, most_reviewed: most_review})
   }
 
   render() {
     return (<div className="btn-review">
-      <Button className={this.state.className}outline="outline" onClick={this.handleClick} color="info">Most Reviewed</Button>
+      <Button className={this.state.className}outline="outline" onClick={this.handleClick} color="info">Filter ✅</Button>
     </div>)
   }
 }

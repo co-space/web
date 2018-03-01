@@ -24,7 +24,8 @@ import {
   SET_ACTIVE_USER,
   SET_FILTER_KEY,
   SET_FILTER_CITY,
-  SET_FILTER_MOST_REVIEW
+  SET_FILTER_MOST_REVIEW,
+  GET_FILTERED_LIST
   // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
@@ -251,7 +252,7 @@ export const getActiveUser = payload => dispatch => {
   return dispatch(setActiveUser(payload))
 }
 
-// SET FILTER PARMATR -----------------------------------------------------------------------------
+// SET FILTER CITY -----------------------------------------------------------------------------
 
 export const filterCity = (city) => ({
   type: SET_FILTER_CITY,
@@ -261,6 +262,58 @@ export const filterCity = (city) => ({
 })
 
 export const setFilterCity = (city) => dispatch => {
-  // console.log(city);
   return dispatch(filterCity(city))
+}
+
+// SET FILTER MOST REVIEW -----------------------------------------------------------------------------
+
+export const mostReview = (most_review) => ({
+  type: SET_FILTER_MOST_REVIEW,
+  payload: {
+    most_review: most_review
+  }
+})
+
+export const setFilterMostReview = (most_review) => dispatch => {
+  return dispatch(mostReview(most_review))
+}
+
+// GET FILTERED LIST -----------------------------------------------------------------------------
+
+export const filterList = () => ({
+  type: GET_FILTERED_LIST,
+  payload: {
+  }
+})
+
+export const fetchFilteredList = payload => dispatch => {
+  console.log(payload.most_reviewed);
+  if(payload.most_reviewed === true){
+    payload.most_reviewed = "true"
+  }else{
+    payload.most_reviewed = "false"
+  }
+
+  if(payload.city === undefined || payload.city === null){
+    payload.city = ""
+  }
+
+  // return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces?city=${payload.city}&most_reviewed=${payload.most_reviewed}`).then(function(response) {
+  //   // console.log(response);
+  //   // console.log(`${process.env.REACT_APP_API_URL}/coworking_spaces?city=${payload.city}&most_reviewed=${payload.most_reviewed}`);
+  //   // if (response.data) {
+  //   //   // self.setState({cospace_id: response.data.data.id, redirect: true})
+  //   // }
+  //   return dispatch(getAllSpaces(payload, response.data))
+  //
+  // }).catch(error => {
+  //   console.log(error.response)
+  // });
+
+  return axios.get(`${process.env.REACT_APP_API_URL}/coworking_spaces?city=${payload.city}&most_reviewed=${payload.most_reviewed}`).then(rawResponse => {
+    return rawResponse.data
+  }).then(response => {
+    return dispatch(getAllSpaces(payload, response.data))
+  })
+  // return dispatch(filterList())
 }

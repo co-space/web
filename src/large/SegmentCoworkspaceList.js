@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 // import PropTypes from "prop-types"
 import HomeThumbnail from "../medium/HomeThumbnail"
-import Pagination from "../medium/Pagination"
 
 import {Row} from "reactstrap"
 
@@ -36,10 +35,8 @@ class SegmentCoworkspaceList extends Component {
 
   render() {
     var lists = this.props.space_lists || []
-    if(lists.length > 1){
-      console.log(lists[0]);
-      console.log(lists[0].total_review);
-    }
+    // if(lists.length > 1){
+    // }
     return (<div>
       <Row >
         {lists.map((list, index) => {
@@ -48,7 +45,7 @@ class SegmentCoworkspaceList extends Component {
           )
         })}
       </Row>
-      <Pagination/>
+
     </div>)
   }
 }

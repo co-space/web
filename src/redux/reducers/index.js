@@ -20,8 +20,7 @@ const rootReducer = combineReducers({
   topics,
   spaces,
   accounts,
-  auth,
-  filter
+  auth
 })
 
 export default rootReducer

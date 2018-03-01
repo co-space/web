@@ -5,19 +5,19 @@ import DropdownCity from "../../medium/DropdownCity"
 import {
   // get various actions creator to dispatch the actions
   fetchOneSpace,
-  setFilterCity
+  setFilterCity,
+  fetchFilteredList
 } from "../actions"
 
 const mapStateToProps = (state, ownProps = {}) => {
-  return {
-    selected : state.spaces.selected_space,
-    abc : "abc"
-  }
+  return {selected: state.spaces.selected_space, most_review: state.spaces.most_review, city: state.spaces.city}
+
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchOneSpace: (test) => dispatch(fetchOneSpace(test)),
-  setFilterCity: (param) => dispatch(setFilterCity(param))
+  setFilterCity: (param) => dispatch(setFilterCity(param)),
+  fetchFilteredList: (param) => dispatch(fetchFilteredList(param))
 })
 
 // create container by connecting

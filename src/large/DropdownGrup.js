@@ -6,6 +6,7 @@ import DropdownCity from '../medium/DropdownCity'
 import ButtonReviews from '../medium/ButtonReviews'
 import ButtonTopRated from '../medium/ButtonTopRated'
 import ConnectedDropdownCity from '../redux/containers/ConnectedDropdownCity'
+import FilterButton from '../medium/FilterButton'
 
 
 
@@ -16,6 +17,7 @@ const DropdownGroup = ({ className }) => (
       <h6>Filter Space</h6>
       <ConnectedDropdownCity />
       <ButtonReviews />
+      <FilterButton />
     </Col>
     {/* <Col sm={3} className="column right" >
       <NavButtons />
