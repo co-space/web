@@ -4,7 +4,7 @@ import SegmentProfile from "../../large/SegmentProfile"
 
 import {
   // get various actions creator to dispatch the actions
-  fetchUserProfile
+  fetchUserProfile,
 } from "../actions"
 
 const mapStateToProps = (state, ownProps = {}) => {

@@ -25,7 +25,8 @@ import {
   SET_FILTER_KEY,
   SET_FILTER_CITY,
   SET_FILTER_MOST_REVIEW,
-  GET_FILTERED_LIST
+  GET_FILTERED_LIST,
+  DESTROY_TOKEN
   // LOADING_TRUE,
   // LOADING_FALSE,
   // HANDLE_ERROR
@@ -316,4 +317,16 @@ export const fetchFilteredList = payload => dispatch => {
     return dispatch(getAllSpaces(payload, response.data))
   })
   // return dispatch(filterList())
+}
+
+
+// DESTROY TOKEN -----------------------------------------------------------------------------
+
+export const deleteToken = () => ({
+  type: DESTROY_TOKEN,
+  payload: {}
+})
+
+export const destroyToken = () => dispatch => {
+  return dispatch(deleteToken())
 }
