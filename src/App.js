@@ -18,6 +18,7 @@ import Details from "./pages/Details"
 import Info from "./pages/Info"
 import ConnectedInfo from "./redux/containers/ConnectedInfo"
 
+console.log(process.env);
 
 const App = props => {
   return (
