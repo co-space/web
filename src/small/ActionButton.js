@@ -1,7 +1,9 @@
 import React from "react"
+import {Button} from "reactstrap"
+
 
 const ActionButton = ({ children }) => (
-  <button className="action button">{children}</button>
+  <Button outline color="primary" className="action button">{children}</Button>
 )
 
 export default ActionButton
