@@ -47,7 +47,7 @@ class AuthRegisterForm extends Component {
         button: "Sign In"
       }).then(okay=> {
         if (okay) {
-          window.location.href = `${process.env.REACT_APP_API_URL}/login`
+          window.location.href = `${process.env.REACT_APP_URL}/login`
         }
       })
     }).catch(error => {
