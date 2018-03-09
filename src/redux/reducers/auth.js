@@ -5,7 +5,7 @@
 // import {posts} from "../stores"
 
 import {
-  SET_TOKEN,SET_ACTIVE_USER
+  SET_TOKEN, SET_ACTIVE_USER, DESTROY_TOKEN
   // HANDLE_ERROR
 } from "../actions/types"
 
@@ -26,11 +26,16 @@ export default(state = {}, action) => {
         ...state,
         token: action.payload.data
       }
-      case SET_ACTIVE_USER:
-        return {
-          ...state,
-          active_user: action.payload
-        }
+    case SET_ACTIVE_USER:
+      return {
+        ...state,
+        active_user: action.payload
+      }
+    case DESTROY_TOKEN:
+      return {
+        ...state,
+        token: undefined
+      }
     default:
       return state
   }

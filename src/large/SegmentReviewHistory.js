@@ -21,11 +21,12 @@ class SegmentProfileInfo extends Component {
         <b>Review History</b>
       </h4>
       {selected_review_history.map((review, index) => {
+        var photo = selected_review_history[index].photos[0].split(',')[0]
         return (
           <ReviewHistory key={index}
           name={selected_review_history[index].name}
           city={selected_review_history[index].location.city}
-          photo={selected_review_history[index].photos[0]}
+          photo={photo}
 
           reviews={selected_review_history[index].reviews}
           />

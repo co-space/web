@@ -21,6 +21,11 @@ class SegmentProfile extends Component {
     this.fetchUserProfile = this.props.fetchUserProfile
     this.profile = this.props.profile
     this.id = this.profile.match.params.id
+    this.signOut = this.signOut.bind(this)
+  }
+
+  signOut(){
+
   }
 
   componentWillMount() {
@@ -42,7 +47,7 @@ class SegmentProfile extends Component {
     return (<Row>
       <Col sm={3} className="p-auto">
         <img className="ava-profile-page mb-3" src={profile_picture} alt=""/>
-        <ListGroup>
+        <ListGroup className="mb-3">
           <Link to={`${match_url}`}>
             <ListGroupItem>Profile</ListGroupItem>
           </Link>
@@ -52,6 +57,9 @@ class SegmentProfile extends Component {
           <Link to={`${match_url}/cospace`}>
             <ListGroupItem>Cospace</ListGroupItem>
           </Link>
+        </ListGroup>
+        <ListGroup>
+            <a href="#"><ListGroupItem color="danger">Sign Out</ListGroupItem></a>
         </ListGroup>
       </Col>
       <Col sm={9}>
@@ -65,7 +73,6 @@ class SegmentProfile extends Component {
       </Col>
     </Row>)
   }
-
 }
 
 export default SegmentProfile

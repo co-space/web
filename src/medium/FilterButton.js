@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Button} from 'reactstrap'
 import {connect} from "react-redux"
+import Ionicon from 'react-ionicons'
+
 
 import {
   // get various actions creator to dispatch the actions
@@ -39,7 +41,7 @@ class ButtonReviews extends Component {
 
   render() {
     return (<div className="btn-review">
-      <Button className={this.state.className}outline="outline" onClick={this.handleClick} color="info">Filter ✅</Button>
+      <Button className={this.state.className}outline="outline" onClick={this.handleClick} color="info">Filter <Ionicon icon="md-checkmark" fontSize="20px" color="#ff6b81"/></Button>
     </div>)
   }
 }
